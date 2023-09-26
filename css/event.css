@@ -5,9 +5,9 @@
 }
 
 .navbar {
-    background-image: url(../COVID19_Public_Library_VIEW_13.jpg);
     width: 100%;
     height: 90vh;
+    background-image: url(../COVID19_Public_Library_VIEW_13.jpg);
 }
 nav{
     width: 100%;
@@ -58,10 +58,10 @@ header {
 }
 
 #menu li ul {
-    display: none;
-    position: absolute;
     width: 19%;
     height: 22%;
+    display: none;
+    position: absolute;
     background-color: #074783;
     margin-top: 11px;
     padding: 10px;
@@ -97,9 +97,9 @@ header {
     padding-left: 10%;
 }
 button{
-    cursor: pointer;
     width: 45px;
     height: 36px;
+    cursor: pointer;
     border-radius: 9px;
     border: none;
     position: absolute;
@@ -108,61 +108,52 @@ button{
     transform: scale(0.9);
     background-color: #dfd7d7;
 }
-
 .list {
     display: inline;
     color: azure;
 }
-
 .list li {
     display: inline-block;
 }
-
 ul li:hover ul {
     display: block;
 }
-
 .list li ul {
-    background-color: #074783;
-    position: absolute;
     width: 200px;
+    position: absolute;
     display: none;
+    background-color: #074783;
 }
-
 .list li ul li {
     display: block; 
     padding: 10px;
 }
-
 .list li ul li a {
     display: block !important;
     color: azure;
     text-decoration: none;
 }
-
 .list li ul li:hover {
     background-color: #376b9b;
 }
 .banner{
-    background-color: aqua;
     height: 70vh;
-   
+    background-color: aqua;
 }
 .banner-event{
     height: 60vh;
     display: flex;
     align-items: center;
-    background-image: url(../PIC/Imgevent/photo_2023-09-26_07-36-43.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-image: url(../PIC/Imgevent/photo_2023-09-26_07-36-43.jpg);
 }
 .title-event{
-    background-color:#00000048;
     width: 80vh;
+    padding: 4vh;
     font-size: 15px;
     border-radius: 2vh;
-    padding: 4vh;
-   
+    background-color:#00000048;
 }
 h1{
     font-size: 50px;
@@ -172,6 +163,44 @@ h1,.title-event p{
    margin-bottom: 2vh;
     color: white;
 }
+.past-event{
+    margin: 100px;
+}
+.img-past{
+    height: 115vh;
+    display: grid;
+    gap: 20px;
+}
+.card{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.title-imgevent-past{
+    width: 130vh;
+    font-size: 20px;
+    margin-left: 5vh;
+    
+}
+.g-icon{
+    width: 70vh;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+.icon{
+    display: flex;
+    align-items: center;
+}
+.icon p{
+    margin-left: 10px;
+}
+.past-event h1{
+    color: black;
+    font-size: 40px;
+}
+
+
 @media(min-width:1024px) {
     .list {
         display: none;
@@ -179,6 +208,26 @@ h1,.title-event p{
     .title-event{
         width: 58vh;
         padding: 1vh;
+    }
+    .past-event{
+        margin: 50px;
+    }
+    .card{
+        display: flex;
+    }
+    .card img{
+        width: 30vh;
+        height: 30vh;
+    }
+    .title-imgevent-past{
+        width: 50vh;
+    }
+    .g-icon{
+        width: 50vh;
+       
+    }
+    .past-event h1{
+        margin-left: 0;
     }
 }
 @media(min-width:768px) and (max-width:1023px) {
@@ -189,6 +238,28 @@ h1,.title-event p{
         width: 65vh;
         padding: 2vh;
     }
+    .card{
+        display: flex;
+    }
+    .card img{
+        width: 35vh;
+        height: 33vh;
+    }
+    .past-event{
+        margin: 50px;
+    }
+    .title-imgevent-past{
+        margin-left: 2vh;
+    }
+    .g-icon,.title-imgevent-past{
+        width: 56vh;
+        font-size: 14px;
+    }
+    .g-icon{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
    
 }
 @media (min-width:320px) and (max-width:767px) {
@@ -214,7 +285,49 @@ h1,.title-event p{
     header {
         width: 80%;
         height: 30px;
+    }
+    .past-event h1{
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .past-event{
+        margin: 30px;
+        height: 400vh;
+    }
+    .card{
+        height: 110vh;
+        display: grid;
+        grid-template-columns: 1fr;
        
     }
+    .g-icon,.title-imgevent-past{
+        width: 56vh;
+        font-size: 10px;
+
+    }
+    .title-imgevent-past{
+        width: 85vh;
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .g-icon{
+        width: 90vh;
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+    }
+    .icon{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .icon p{
+        margin-left: 0;
+        font-size: smaller;
+    }
+    .icon i{
+        margin-left: 5vh;
+        padding-bottom: 2vh;
+    }
+    
    
 }
