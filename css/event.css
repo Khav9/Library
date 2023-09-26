@@ -156,7 +156,7 @@ ul li:hover ul {
     background-color:#00000048;
 }
 h1{
-    font-size: 50px;
+    font-size: 55px;
 }
 h1,.title-event p{
    margin-left: 3vh;
@@ -167,20 +167,23 @@ h1,.title-event p{
     margin: 100px;
 }
 .img-past{
-    height: 115vh;
+    height: 145vh;
     display: grid;
     gap: 20px;
 }
 .card{
+    width: 100%;
     height: 40vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 .title-imgevent-past{
-    width: 130vh;
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 5vh;
     
+}
+.title-imgevent-past h2{
+    font-style: 45px;
 }
 .g-icon{
     width: 70vh;
@@ -189,6 +192,7 @@ h1,.title-event p{
     grid-template-columns: repeat(2,1fr);
 }
 .icon{
+    width: 30vh;
     display: flex;
     align-items: center;
 }
@@ -197,7 +201,7 @@ h1,.title-event p{
 }
 .past-event h1{
     color: black;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 
