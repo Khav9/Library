@@ -2,13 +2,14 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family:sans-serif;
 }
 
 nav {
+      background-color: rgba(20, 20, 99, 0.849);
       width: 100%;
       height: 60px;
       box-shadow: 0 0 10px #000;
-      background-color: rgba(20, 20, 99, 0.849);
 }
 
 header {
@@ -21,10 +22,10 @@ header {
 }
 
 .logo {
+      flex: 0.4;
       color: white;
       font-size: 25px;
       text-decoration: none;
-      flex: 0.4;
       list-style: none;
 }
 
@@ -54,11 +55,11 @@ header {
 }
 
 #menu li ul {
+      background-color: #074783;
+      width: 23%;
+      height: 22%;
       display: none;
       position: absolute;
-      width: 19%;
-      height: 22%;
-      background-color: #074783;
       margin-top: 11px;
       padding: 10px;
       border-radius: 6px;
@@ -83,11 +84,11 @@ header {
 }
 
 .search-box input {
+      background-color: #dfd7d7;
       width: 100%;
       height: 36px;
       border: none;
       outline: none;
-      background-color: #dfd7d7;
       border-radius: 9px;
       color: gray;
       font-size: 18px;
@@ -95,16 +96,16 @@ header {
 }
 
 button {
-      cursor: pointer;
+      background-color: #dfd7d7;
       width: 45px;
       height: 36px;
+      cursor: pointer;
       border-radius: 9px;
       border: none;
       position: absolute;
       top: 0;
       right: 0;
       transform: scale(0.9);
-      background-color: #dfd7d7;
 }
 
 .list {
@@ -122,8 +123,8 @@ ul li:hover ul {
 
 .list li ul {
       background-color: #074783;
-      position: absolute;
       width: 200px;
+      position: absolute;
       display: none;
 }
 
@@ -144,13 +145,11 @@ ul li:hover ul {
 
 /* card-------------------------- */
 main{
-      background-color: #a09c9c;
-      height:465vh ;
+      height:469vh ;
 }
 .book-page {
-      /* background-color: blueviolet; */
       width: 80%;
-      height: 150vh;
+      height: 151vh;
       margin: auto;
       margin-top: 15px;
       display: flex;
@@ -164,12 +163,11 @@ main{
 }
 
 .card {
-      /* background-color: #a09696; */
       width: 100%;
-      height: auto;
+      height: 444px;
       display: flex;
       flex-direction: column;
-      margin: 14px 0;
+      margin: 5px 0;
       gap: 3px;
 }
 
@@ -210,10 +208,57 @@ img {
       background-color: rgba(20, 20, 99, 0.849);
       color: white;
 }
-/* footer---------------------------------------------- */
+/* footer---------------------------------------------- */ 
 footer{
-      height: 50vh;
-      background-color: #9c8888;
+      background-color:rgba(79, 79, 79, 1);
+      height: 47vh;
+      padding-top: 21px;
+}
+.footer{
+      margin:0 10%;
+      display: flex;
+      flex-direction: column;
+      color: rgb(212, 202, 202);
+}
+.footer-top{
+      height: 35vh;
+      display: flex;
+      justify-content: space-between;
+}
+
+ul li{
+      list-style: none;
+}
+.footer a{
+      text-decoration: none;
+      color: rgb(212, 202, 202);
+}
+.footer a:hover{
+      color: blueviolet;
+}
+.cu-group{
+      display: grid;
+      gap: 10px;
+}
+
+.cu-item a{
+      display: flex;
+      gap: 15px;
+}
+
+.footer-bottom{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+}
+.footer-bottom a img{
+      width: 45px;
+      height: 3%;
+}
+#whatup{
+      width: 35px;
+      height: 2%;
 }
 /* responsive-------------------------------------------------- */
 @media(min-width:1024px) {
@@ -226,6 +271,30 @@ footer{
       .list {
             display: none;
       }
+      main{
+            height:582vh ;
+      }
+      .book-page {
+            height: 191vh;
+      }
+  
+      .contain-card {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px 15px;
+      }
+      .card {
+            height: 511px;
+      }
+
+      img {
+            height:390px;
+      }
+      footer{
+            height: 25vh;
+      }
+      .footer-top{
+            height: 18vh;
+      }
 }
 
 @media (min-width:320px) and (max-width:767px) {
@@ -235,5 +304,64 @@ footer{
 
       #menu {
             display: none;
+      }
+      main{
+            height:838vh ;
+      }
+      .book-page {
+            width: 100%;
+            height: 274vh;
+      }
+      .contain-card {
+            grid-template-columns: 1fr;
+            gap: 2px 15px;
+      }
+      .card {
+            height: 183px;
+            display: flex;
+            flex-direction: row;
+            padding-left: 30px;
+      }
+      .title-book{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
+      img {
+            width: 120px;
+            height:180px;
+      }
+      footer{
+            height: 77vh;
+      }
+      .footer{
+            padding-left: 10px;
+            margin:0;
+            flex-direction: column;
+      }
+      .footer-top{
+            height:63vh;
+            flex-direction: column;  
+      }
+      .footer-right{
+            display: flex;
+            gap: 10px;
+      }
+      .cu-group{
+            display: flex;
+      }
+      .cu-item a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      }
+      h2{
+            font-size:20px;
+      }
+      h3{
+            font-size: 15px;
+      }
+      p{
+            font-size: 12px;
       }
 }
