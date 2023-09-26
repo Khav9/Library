@@ -167,23 +167,27 @@ h1,.title-event p{
     margin: 100px;
 }
 .img-past{
-    height: 145vh;
-    display: grid;
-    gap: 20px;
+    width: 100vh;
+    height: 135vh;
 }
 .card{
-    width: 100%;
     height: 40vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 .title-imgevent-past{
-    font-size: 25px;
+    font-size: 15px;
     margin-left: 5vh;
     
 }
+
 .title-imgevent-past h2{
-    font-style: 45px;
+    font-size: 35px;
+    width: 100vh;
+}
+.title-imgevent-past p{
+    font-size: 20px;
+    width: 100vh;
 }
 .g-icon{
     width: 70vh;
@@ -192,7 +196,7 @@ h1,.title-event p{
     grid-template-columns: repeat(2,1fr);
 }
 .icon{
-    width: 30vh;
+    width: 50vh;
     display: flex;
     align-items: center;
 }
@@ -201,7 +205,7 @@ h1,.title-event p{
 }
 .past-event h1{
     color: black;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 
@@ -244,6 +248,7 @@ h1,.title-event p{
     }
     .card{
         display: flex;
+        height: 50vh;
     }
     .card img{
         width: 35vh;
@@ -258,6 +263,10 @@ h1,.title-event p{
     .g-icon,.title-imgevent-past{
         width: 56vh;
         font-size: 14px;
+    }
+    .title-imgevent-past p{
+        font-size: 20px;
+        width: 30vh;
     }
     .g-icon{
         display: grid;
@@ -286,9 +295,12 @@ h1,.title-event p{
         font-size: 10px;
         
     }
+    .banner-event{
+        width: 106vh;
+    }
     header {
-        width: 80%;
-        height: 30px;
+        width: 100%;
+        height: 10px;
     }
     .past-event h1{
         margin-left: 0;
@@ -296,7 +308,7 @@ h1,.title-event p{
     }
     .past-event{
         margin: 30px;
-        height: 400vh;
+        height: 350vh;
     }
     .card{
         height: 110vh;
@@ -316,19 +328,22 @@ h1,.title-event p{
         grid-template-columns: 1fr;
     }
     .g-icon{
-        width: 90vh;
+      
+        width: 20vh;
         display: grid;
         grid-template-columns:repeat(3,1fr);
     }
     .icon{
+        width: 32vh;
         display: grid;
         grid-template-columns: 1fr;
     }
     .icon p{
-        margin-left: 0;
+        margin-left: 4vh;
         font-size: smaller;
     }
     .icon i{
+        width: 10vh;
         margin-left: 5vh;
         padding-bottom: 2vh;
     }
