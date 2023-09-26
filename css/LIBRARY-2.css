@@ -145,13 +145,13 @@ ul li:hover ul {
 
 /* card-------------------------- */
 main{
-      height:469vh ;
+      height:315vh ;
      
 }
 .book-page {
       background-color: #8f2828;
       width: 80%;
-      height: 221vh;
+      height: 148vh;
       margin: auto;
       margin-top: 15px;
       display: flex;
@@ -161,7 +161,7 @@ main{
 .contain-card {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 25px 15px;
+      gap: 0px 15px;
 }
 
 .card {
@@ -308,7 +308,7 @@ ul li{
             display: none;
       }
       main{
-            height:838vh ;
+            height:560vh ;
       }
       .book-page {
             width: 100%;
@@ -330,8 +330,8 @@ ul li{
             justify-content: center;
       }
       img {
-            width: 120px;
-            height:180px;
+            width: 90%;
+            height:90%;
       }
       footer{
             height: 77vh;
