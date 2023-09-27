@@ -287,7 +287,7 @@ h1,.title-event p{
         padding: 1vh;
     }
     h1{
-        font-size: 25px;
+        font-size: 45px;
     }
     .title-event p{
         margin-left: 3vh;
@@ -304,7 +304,7 @@ h1,.title-event p{
     }
     .past-event h1{
         margin-left: 0;
-        font-size: 20px;
+        font-size: 40px;
     }
     .past-event{
         margin: 30px;
@@ -340,7 +340,7 @@ h1,.title-event p{
     }
     .icon p{
         margin-left: 4vh;
-        font-size: smaller;
+        font-size: small;
     }
     .icon i{
         width: 10vh;
