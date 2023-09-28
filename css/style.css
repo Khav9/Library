@@ -167,7 +167,7 @@ main {
 
 .open{
     background-color:rgba(19, 66, 110, 0.407) ;
-    width: 40%;
+    width: 50%;
     height: 50vh;
     padding: 15px;
     border-radius: 5px;
@@ -188,6 +188,42 @@ section{
     position: absolute;
     left: 87%;
 }
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+   }
+   
+   .btn-1 {
+    background: rgba(79,160,236);
+    background: linear-gradient(0deg, rgb(73, 142, 222) 30%, rgba(129,5,240,1) 100%);
+    border: none;
+   }
+   
+   .btn-1:before {
+    height: 0%;
+    width: 2px;
+   }
+   
+   .btn-1:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                 -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+       inset -4px -4px 6px 0 rgba(255,255,255,.2),
+       inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+   }
 .card-book{
     /* background-color: #074783; */
     padding: 10px;
@@ -367,7 +403,7 @@ ul li{
     }
     .right{
         position: absolute;
-        left: 78%;
+        left: 70%;
     }
     .card-book{
         display: flex;
@@ -384,7 +420,7 @@ ul li{
     }
     .event>.right-event{
         position: absolute;
-        left: 78%;
+        left: 70%;
     }
     .description>.g-icon{
         display: flex;
@@ -446,7 +482,7 @@ ul li{
     }
     .right{
         position: absolute;
-        left: 79%;
+        left: 55%;
     }
     .card-book{
         display: flex;
@@ -465,6 +501,10 @@ ul li{
     }
     .left-event{
         font-size: 10px;
+    }
+    .event>.right-event{
+        position: absolute;
+        left: 55%;
     }
     .event-card{
         display: flex;
