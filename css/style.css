@@ -11,7 +11,7 @@ nav{
     background-color: rgba(79,160,236);
     position: sticky;
     top: 0;
-    z-index: 111;
+    /* z-index: 111; */
 }
 header {
     width: 80%;
@@ -186,7 +186,7 @@ section{
 }
 .right{
     position: absolute;
-    left: 87%;
+    left: 84%;
 }
 .custom-btn {
     width: 130px;
@@ -254,7 +254,7 @@ section{
 }
 .event>.right-event{
     position: absolute;
-    left: 87%;
+    left: 84%;
 }
 .event-home{
     /* background-color: #f4e327; */
@@ -397,13 +397,21 @@ ul li{
         width: 60%;
         font-size: 23px;
     }
+    section{
+        margin: 30px;
+    }
     .popular{
         /* margin: 10px 30px 30px 10px ; */
         width: 100%;
     }
+    .custom-btn{
+        width: 100px;
+        height: 5vh;
+        font-size: 10px;
+    }
     .right{
         position: absolute;
-        left: 70%;
+        left: 74%;
     }
     .card-book{
         display: flex;
@@ -420,7 +428,7 @@ ul li{
     }
     .event>.right-event{
         position: absolute;
-        left: 70%;
+        left: 74%;
     }
     .description>.g-icon{
         display: flex;
@@ -435,7 +443,7 @@ ul li{
     .des{
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 85vh;
     }
     .about-left,.about-right{
         width: 100%;
@@ -474,15 +482,24 @@ ul li{
         height: 40vh;
     }
     section{
+        /* margin: 0; */
         margin: 10px 10px 10px 10px;
         
     }
-    .popular{
+    .popular>.left>h2{
+        font-size: 15px;
+    }
+    .left-event>h2{
+        font-size: 15px;
+    }
+    .custom-btn{
+        width: 80px;
+        height: 4vh;
         font-size: 5px;
     }
     .right{
         position: absolute;
-        left: 55%;
+        left: 67%;
     }
     .card-book{
         display: flex;
@@ -504,7 +521,7 @@ ul li{
     }
     .event>.right-event{
         position: absolute;
-        left: 55%;
+        left: 67%;
     }
     .event-card{
         display: flex;
