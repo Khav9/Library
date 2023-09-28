@@ -137,25 +137,25 @@ ul li:hover ul {
     background-color: #376b9b;
 }
 .banner{
-    height: 70vh;
-    background-color: aqua;
+    height: 60vh;
+
 }
 .banner-event{
-    height: 60vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url(../PIC/Imgevent/photo_2023-09-26_07-36-43.jpg);
+    background-image: url(../PIC/Imgevent/bg3.png);
 }
 .title-event{
-    width: 80vh;
+    width: 90vh;
     padding: 4vh;
-    font-size: 15px;
+    font-size: 26px;
     border-radius: 2vh;
     background-color:#00000048;
 }
-h1{
+.title-event h1{
     font-size: 55px;
 }
 h1,.title-event p{
@@ -164,21 +164,33 @@ h1,.title-event p{
     color: white;
 }
 .past-event{
-    margin: 100px;
+    margin: 80px;
 }
-.img-past{
-    width: 100vh;
-    height: 135vh;
+.incoming-event{
+    margin: 80px;
+  
 }
+
+.img{
+    width: 60vh;
+    height: 45vh;
+    display: grid;
+    margin-top: 7vh;
+
+}
+
 .card{
-    height: 40vh;
+    width: 180vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 .title-imgevent-past{
-    font-size: 15px;
+    font-size: 26px;
     margin-left: 5vh;
     
+}
+.text{
+    margin-top: 8vh;
 }
 
 .title-imgevent-past h2{
@@ -186,14 +198,13 @@ h1,.title-event p{
     width: 100vh;
 }
 .title-imgevent-past p{
-    font-size: 20px;
-    width: 100vh;
+    width: 120vh;
 }
 .g-icon{
-    width: 70vh;
+    width: 20vh;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
 }
 .icon{
     width: 50vh;
@@ -207,40 +218,29 @@ h1,.title-event p{
     color: black;
     font-size: 45px;
 }
+.incoming-event h1{
+    color: black;
+    font-size: 45px;
+}
 
 
 @media(min-width:1024px) {
     .list {
         display: none;
     }
-    .title-event{
-        width: 58vh;
-        padding: 1vh;
-    }
-    .past-event{
-        margin: 50px;
-    }
-    .card{
-        display: flex;
-    }
-    .card img{
-        width: 30vh;
-        height: 30vh;
-    }
-    .title-imgevent-past{
-        width: 50vh;
-    }
-    .g-icon{
-        width: 50vh;
-       
-    }
-    .past-event h1{
-        margin-left: 0;
-    }
 }
 @media(min-width:768px) and (max-width:1023px) {
     .list{
         display: none;
+    }
+    #menu li {
+        width: 7vh;
+        font-size: 10px;
+    }
+    
+    .logo{
+        font-size: 15px;
+        flex: 0.3;
     }
     .title-event{
         width: 65vh;
@@ -248,105 +248,171 @@ h1,.title-event p{
     }
     .card{
         display: flex;
-        height: 50vh;
+        
     }
-    .card img{
+    .incoming-event, .past-event{
+        margin: 30px;
+    }
+    .img{
         width: 35vh;
-        height: 33vh;
+        height: 25vh;
     }
-    .past-event{
-        margin: 50px;
+    .text, .img{
+        margin-top: 5px;
+        
     }
-    .title-imgevent-past{
-        margin-left: 2vh;
+   
+    .text h2{
+        font-size: 20px;
     }
-    .g-icon,.title-imgevent-past{
-        width: 56vh;
-        font-size: 14px;
+    .past-event p{
+        font-size: 13px;
     }
     .title-imgevent-past p{
-        font-size: 20px;
-        width: 30vh;
+        width: 50vh;
+       
+       
     }
     .g-icon{
-        display: grid;
-        grid-template-columns: 1fr;
+        gap: 5px;
+        margin-top: 0;
+
+    }
+    .icon i{
+        width: 7px;
+       
+    }
+    .icon p{
+        margin-left: 25px;
+    }
+    .incoming-event p{
+        font-size: 13px;
+
     }
     
    
+    
 }
 @media (min-width:320px) and (max-width:767px) {
     .logo h3{
         display: none;
+       
+    }
+    .list h2{
+        font-size: 15px;
     }
     #menu{
         display: none;
     }
+    .list{
+        width: 30vh;
+    }
     .title-event{
-        width: 60vh;
-        padding: 1vh;
+        width: 55vh;
+        padding: 0vh;
+        font-size: 8px;
     }
-    h1{
-        font-size: 45px;
-    }
-    .title-event p{
-        margin-left: 3vh;
-        margin-bottom: 2vh;
-        font-size: 10px;
-        
-    }
-    .banner-event{
-        width: 106vh;
-    }
-    header {
-        width: 100%;
-        height: 10px;
-    }
-    .past-event h1{
-        margin-left: 0;
-        font-size: 40px;
-    }
-    .past-event{
-        margin: 30px;
-        height: 350vh;
-    }
-    .card{
-        height: 110vh;
-        display: grid;
-        grid-template-columns: 1fr;
-       
-    }
-    .g-icon,.title-imgevent-past{
-        width: 56vh;
-        font-size: 10px;
+    .title-event h1{
+        font-size: 20px;
 
     }
-    .title-imgevent-past{
+    .banner-event{
+        height: 50vh;
+        width: 100%;
+    }
+    nav{
+        height: 40px;
+        
+    }
+    .search-box input{
+        width: 100%;
+        height: 20px;
+        font-size: small;
+    }
+    
+    button{
+        width: 20px;
+        height: 3px;
+ 
+    }
+    .incoming-event h1,.past-event  h1{
+        font-size: 19px;
+    }
+    .text{
+        height: 50vh;
+        margin-top: 0vh;
+      
+    }
+    .text p ,.icon p{
+        font-size:12px;
+
+    }
+    .text h2,.text p, .text, .title-imgevent-past{
         width: 85vh;
-        margin-left: 0;
-        display: grid;
-        grid-template-columns: 1fr;
+    }
+    
+    .text h2 ,.text p{
+        margin-top: 0vh;
+    
+    }
+    .img{
+        width: 100%;
+        margin-top: 0px;
+        
+    }
+    .img img{
+        height: 45vh;
     }
     .g-icon{
-      
-        width: 20vh;
+        margin-top: 0vh;
+        width: 10px;
         display: grid;
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .icon{
-        width: 32vh;
+        width: 120px;
+        height: 20vh;
+        display: flex;
+        align-items: center;
         display: grid;
-        grid-template-columns: 1fr;
-    }
-    .icon p{
-        margin-left: 4vh;
-        font-size: small;
+        grid-template-columns: repeat(1,1fr);
     }
     .icon i{
         width: 10vh;
-        margin-left: 5vh;
-        padding-bottom: 2vh;
+        height: 15px;
+        margin-left: 7vh;
+    }
+    .icon p{
+        height: 15px;
+        width: 120px;
+        margin-top: 5vh;
+    }
+    .icon:nth-child(2){
+        display: none;
+    }
+    .card{
+        width: 94vh;
+        height: 140vh;
+        gap: 0px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .incoming-event,.past-event{
+        margin: 10px;
+
+    }
+    .title-imgevent-past{
+        height: 70vh;
+        display: grid;
+        gap: 0px;
+    }
+    .title-imgevent-past h2{
+        font-size: 15px;
+        margin-bottom: 0vh;
     }
     
-   
+    
+  
+
+
 }
