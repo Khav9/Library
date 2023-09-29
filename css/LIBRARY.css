@@ -2,7 +2,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family:sans-serif;
+      font-family: sans-serif;
 }
 
 nav {
@@ -141,25 +141,32 @@ ul li:hover ul {
 
 .list li ul li:hover {
       background-color: #376b9b;
+      border-radius: 9px;
 }
 
 /* card-------------------------- */
-main{
-      height:469vh ;
-}
 .book-page {
       width: 80%;
-      height: 151vh;
       margin: auto;
       margin-top: 15px;
       display: flex;
       flex-direction: column;
 }
 
+.tittle {
+      font-size: 26px;
+      font-weight: bold;
+      padding: 0 0 15px 0;
+}
+
+.tittle-book {
+      font-size: 20px;
+}
+
 .contain-card {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 25px 15px;
+      gap: 15px 15px;
 }
 
 .card {
@@ -183,10 +190,10 @@ img {
 }
 
 .pagination {
-      display: inline-block;
-      margin: auto;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
 }
 
 .pagination a {
@@ -199,7 +206,7 @@ img {
 }
 
 .pagination a.active {
-      background-color:rgba(20, 20, 99, 0.849);
+      background-color: rgba(20, 20, 99, 0.849);
       color: white;
       border: 1px solid rgba(20, 20, 99, 0.849);
 }
@@ -208,96 +215,136 @@ img {
       background-color: rgba(20, 20, 99, 0.849);
       color: white;
 }
-/* footer---------------------------------------------- */ 
-footer{
-      background-color:rgba(79, 79, 79, 1);
+
+/* footer---------------------------------------------- */
+footer {
+      background-color: rgba(79, 79, 79, 1);
       height: 47vh;
       padding-top: 21px;
 }
-.footer{
-      margin:0 10%;
+
+.footer {
+      margin: 0 10%;
       display: flex;
       flex-direction: column;
       color: rgb(212, 202, 202);
 }
-.footer-top{
+
+.footer-top {
       height: 35vh;
       display: flex;
       justify-content: space-between;
 }
 
-ul li{
+ul li {
       list-style: none;
 }
-.footer a{
+
+.footer a {
       text-decoration: none;
       color: rgb(212, 202, 202);
 }
-.footer a:hover{
+
+.footer a:hover {
       color: blueviolet;
 }
-.cu-group{
+
+.cu-group {
       display: grid;
       gap: 10px;
 }
 
-.cu-item a{
+.cu-item a {
       display: flex;
       gap: 15px;
 }
 
-.footer-bottom{
+.footer-bottom {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 30px;
 }
-.footer-bottom a img{
+
+.footer-bottom a img {
       width: 45px;
       height: 3%;
 }
-#whatup{
+
+#whatup {
       width: 35px;
       height: 2%;
 }
+
 /* responsive-------------------------------------------------- */
-@media(min-width:1024px) {
+@media(max-width:1400px) {
       .list {
             display: none;
       }
+
 }
 
-@media(min-width:768px) and (max-width:1023px) {
+@media(max-width:900px) {
       .list {
             display: none;
       }
-      main{
-            height:582vh ;
+
+      .tittle {
+            font-size: 23px;
+            font-weight: bold;
       }
-      .book-page {
-            height: 191vh;
+
+      .tittle-book {
+            font-size: 18px;
       }
-  
+
+      p {
+            font-size: 14px;
+      }
+
       .contain-card {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2px 15px;
       }
+
       .card {
-            height: 511px;
+            width: 85%;
+
+            height: 430px;
       }
 
       img {
-            height:390px;
+            height: 280px;
       }
-      footer{
-            height: 25vh;
+
+      footer {
+            height: 42vh;
       }
-      .footer-top{
-            height: 18vh;
+
+      .footer-top {
+            height: 29vh;
       }
 }
 
-@media (min-width:320px) and (max-width:767px) {
+@media (max-width:600px) {
+      header {
+            width: 100%;
+            padding:0 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+      }
+
+      .list {
+            display: inline-block;
+      }
+
+      .list li ul {
+            width: 48%;
+            height: 39%;
+            border-radius: 9px;
+      }
+
       .logo h3 {
             display: none;
       }
@@ -305,63 +352,92 @@ ul li{
       #menu {
             display: none;
       }
-      main{
-            height:838vh ;
+      .search-box{
+            flex: 0.5;
       }
+
       .book-page {
             width: 100%;
-            height: 274vh;
       }
+
+      .tittle {
+            font-size: 19px;
+            font-weight: bold;
+            margin-left: 30px;
+      }
+
+      .describe-book {
+            margin-left: 10px;
+      }
+
+      .tittle-book {
+            font-size: 15px;
+      }
+
+      p {
+            font-size: 12px;
+      }
+
       .contain-card {
             grid-template-columns: 1fr;
             gap: 2px 15px;
       }
+
       .card {
             height: 183px;
             display: flex;
             flex-direction: row;
             padding-left: 30px;
       }
-      .title-book{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-      }
+
       img {
             width: 120px;
-            height:180px;
+            height: 180px;
       }
-      footer{
-            height: 77vh;
+
+      .pagination {
+            margin-top: 15px;
       }
-      .footer{
+
+      footer {
+            height: 93vh;
+      }
+
+      .footer {
             padding-left: 10px;
-            margin:0;
+            margin: 0;
+      }
+
+      .footer-top {
+            height: 75vh;
             flex-direction: column;
       }
-      .footer-top{
-            height:63vh;
-            flex-direction: column;  
-      }
-      .footer-right{
+
+      .footer-right {
             display: flex;
             gap: 10px;
       }
-      .cu-group{
-            display: flex;
+      .footer-bottom {
+            height: 14vh;
       }
-      .cu-item a{
+
+      .cu-group {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+      }
+
+      .cu-item a {
             display: flex;
             align-items: center;
             justify-content: center;
       }
-      h2{
-            font-size:20px;
+
+      .footer-bottom a img {
+            width: 35px;
       }
-      h3{
-            font-size: 15px;
-      }
-      p{
-            font-size: 12px;
+
+      #whatup {
+            width: 25px;
       }
 }
