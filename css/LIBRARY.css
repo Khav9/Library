@@ -196,109 +196,100 @@ footer {
     height: 93vh;
   }
 }
-
-.footer {
+footer .footer {
   margin: 0 10%;
   display: flex;
   flex-direction: column;
   color: rgb(212, 202, 202);
 }
 @media screen and (max-width: 600px) {
-  .footer {
+  footer .footer {
     padding-left: 10px;
     margin: 0;
   }
 }
-
-.footer-top {
+footer .footer .footer-top {
   height: 35vh;
   display: flex;
   justify-content: space-between;
+  list-style: none;
+}
+footer .footer .footer-top a {
+  text-decoration: none;
+  color: rgb(212, 202, 202);
+}
+footer .footer .footer-top ul li {
+  text-decoration: none;
+  list-style: none;
+}
+footer .footer .footer-top a:hover {
+  color: blueviolet;
 }
 @media screen and (max-width: 900px) {
-  .footer-top {
+  footer .footer .footer-top {
     height: 29vh;
   }
 }
 @media screen and (max-width: 600px) {
-  .footer-top {
+  footer .footer .footer-top {
     height: 75vh;
     flex-direction: column;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .footer-right {
+  footer .footer .footer-top .footer-right {
     display: flex;
     gap: 10px;
   }
 }
-
-ul li {
-  list-style: none;
-}
-
-.footer a {
-  text-decoration: none;
-  color: rgb(212, 202, 202);
-}
-
-.footer a:hover {
-  color: blueviolet;
-}
-
-.cu-group {
+footer .footer .footer-top .footer-right .cu-group {
   display: grid;
   gap: 10px;
 }
 @media screen and (max-width: 600px) {
-  .cu-group {
+  footer .footer .footer-top .footer-right .cu-group {
     display: flex;
     flex-direction: column;
     align-items: start;
   }
 }
-
-.cu-item a {
+footer .footer .footer-top .footer-right .cu-group .cu-item a {
   display: flex;
   gap: 15px;
 }
 @media screen and (max-width: 600px) {
-  .cu-item a {
+  footer .footer .footer-top .footer-right .cu-group .cu-item a {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-
-.footer-bottom {
+footer .footer .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 @media screen and (max-width: 600px) {
-  .footer-bottom {
+  footer .footer .footer-bottom {
     height: 14vh;
   }
 }
-
-.footer-bottom a img {
+footer .footer .footer-bottom a img {
   width: 45px;
   height: 3%;
 }
 @media screen and (max-width: 600px) {
-  .footer-bottom a img {
+  footer .footer .footer-bottom a img {
     width: 35px;
   }
 }
-
-#whatup {
+footer .footer .footer-bottom #whatup {
   width: 35px;
   height: 2%;
 }
 @media screen and (max-width: 600px) {
-  #whatup {
+  footer .footer .footer-bottom #whatup {
     width: 25px;
   }
 }
@@ -317,58 +308,35 @@ ul li {
   display: flex;
   flex-direction: column;
 }
-
-.tittle {
+.book-page .tittle {
   font-size: 26px;
   font-weight: bold;
   padding: 0 0 15px 0;
 }
 @media screen and (max-width: 900px) {
-  .tittle {
+  .book-page .tittle {
     font-size: 23px;
     font-weight: bold;
   }
 }
-
-.tittle-book {
-  font-size: 20px;
-}
-@media screen and (max-width: 900px) {
-  .tittle-book {
-    font-size: 18px;
-  }
-}
-
-.tittle-book:hover {
-  cursor: pointer;
-  color: blueviolet;
-}
-
-@media screen and (max-width: 900px) {
-  p {
-    font-style: 14px;
-  }
-}
-
-.contain-card {
+.book-page .contain-card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px 15px;
 }
 @media screen and (max-width: 900px) {
-  .contain-card {
+  .book-page .contain-card {
     grid-template-columns: repeat(3, 1fr);
     gap: 2px 15px;
   }
 }
 @media screen and (max-width: 600px) {
-  .contain-card {
+  .book-page .contain-card {
     grid-template-columns: 1fr;
     gap: 2px 15px;
   }
 }
-
-.card {
+.book-page .contain-card .card {
   width: 100%;
   height: 444px;
   display: flex;
@@ -377,78 +345,81 @@ ul li {
   gap: 3px;
 }
 @media screen and (max-width: 900px) {
-  .card {
+  .book-page .contain-card .card {
     width: 85%;
     height: 430px;
   }
 }
 @media screen and (max-width: 600px) {
-  .card {
+  .book-page .contain-card .card {
     height: 183px;
     display: flex;
     flex-direction: row;
     padding-left: 30px;
   }
 }
-
-.gp-pic {
+.book-page .contain-card .card .gp-pic {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-img {
+.book-page .contain-card .card .gp-pic img {
   width: 100%;
   height: 330px;
-}
-@media screen and (max-width: 900px) {
-  img {
-    height: 280px;
-  }
-}
-@media screen and (max-width: 600px) {
-  img {
-    width: 120px;
-    height: 180px;
-  }
-}
-
-.card .gp-pic img {
   transform: scale(1);
   transition: 0.3s ease-in-out;
 }
+@media screen and (max-width: 900px) {
+  .book-page .contain-card .card .gp-pic img {
+    height: 280px;
+    position: relative;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .book-page .contain-card .card .gp-pic img {
+    width: 120px;
+    height: 180px;
+    position: relative;
+    z-index: -1;
+  }
+}
 @media screen and (max-width: 1400px) {
-  .card .gp-pic img {
+  .book-page .contain-card .card .gp-pic img {
     position: relative;
     z-index: -1;
   }
 }
 @media screen and (max-width: 1024px) {
-  .card .gp-pic img {
+  .book-page .contain-card .card .gp-pic img {
     position: relative;
     z-index: -1;
   }
 }
-@media screen and (max-width: 900px) {
-  .card .gp-pic img {
-    position: relative;
-    z-index: -1;
-  }
-}
-@media screen and (max-width: 600px) {
-  .card .gp-pic img {
-    position: relative;
-    z-index: -1;
-  }
-}
-
-.gp-pic:hover img {
+.book-page .contain-card .card .gp-pic:hover img {
   transform: scale(0.9);
   cursor: pointer;
 }
-
-.material-symbols-outlined, .material-symbols-rounded {
+.book-page .contain-card .card .describe-book .tittle-book {
+  font-size: 20px;
+}
+@media screen and (max-width: 900px) {
+  .book-page .contain-card .card .describe-book .tittle-book {
+    font-size: 18px;
+  }
+}
+.book-page .contain-card .card .describe-book .tittle-book:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+.book-page .contain-card .card .describe-book .material-symbols-outlined,
+.book-page .contain-card .card .describe-book .material-symbols-rounded {
   color: yellow;
+}
+@media screen and (max-width: 900px) {
+  .book-page .contain-card .card .describe-book p {
+    font-style: 14px;
+  }
 }
 
 .pagination {
@@ -462,7 +433,6 @@ img {
     margin-top: 15px;
   }
 }
-
 .pagination a {
   color: black;
   float: left;
@@ -471,13 +441,11 @@ img {
   transition: background-color 0.3s;
   border: 1px solid rgb(138, 132, 132);
 }
-
 .pagination a.active {
   background-color: rgba(20, 20, 99, 0.849);
   color: white;
   border: 1px solid rgba(20, 20, 99, 0.849);
 }
-
 .pagination a:hover:not(.active) {
   background-color: rgba(20, 20, 99, 0.849);
   color: white;

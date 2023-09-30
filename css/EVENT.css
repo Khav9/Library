@@ -196,109 +196,100 @@ footer {
     height: 93vh;
   }
 }
-
-.footer {
+footer .footer {
   margin: 0 10%;
   display: flex;
   flex-direction: column;
   color: rgb(212, 202, 202);
 }
 @media screen and (max-width: 600px) {
-  .footer {
+  footer .footer {
     padding-left: 10px;
     margin: 0;
   }
 }
-
-.footer-top {
+footer .footer .footer-top {
   height: 35vh;
   display: flex;
   justify-content: space-between;
+  list-style: none;
+}
+footer .footer .footer-top a {
+  text-decoration: none;
+  color: rgb(212, 202, 202);
+}
+footer .footer .footer-top ul li {
+  text-decoration: none;
+  list-style: none;
+}
+footer .footer .footer-top a:hover {
+  color: blueviolet;
 }
 @media screen and (max-width: 900px) {
-  .footer-top {
+  footer .footer .footer-top {
     height: 29vh;
   }
 }
 @media screen and (max-width: 600px) {
-  .footer-top {
+  footer .footer .footer-top {
     height: 75vh;
     flex-direction: column;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .footer-right {
+  footer .footer .footer-top .footer-right {
     display: flex;
     gap: 10px;
   }
 }
-
-ul li {
-  list-style: none;
-}
-
-.footer a {
-  text-decoration: none;
-  color: rgb(212, 202, 202);
-}
-
-.footer a:hover {
-  color: blueviolet;
-}
-
-.cu-group {
+footer .footer .footer-top .footer-right .cu-group {
   display: grid;
   gap: 10px;
 }
 @media screen and (max-width: 600px) {
-  .cu-group {
+  footer .footer .footer-top .footer-right .cu-group {
     display: flex;
     flex-direction: column;
     align-items: start;
   }
 }
-
-.cu-item a {
+footer .footer .footer-top .footer-right .cu-group .cu-item a {
   display: flex;
   gap: 15px;
 }
 @media screen and (max-width: 600px) {
-  .cu-item a {
+  footer .footer .footer-top .footer-right .cu-group .cu-item a {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-
-.footer-bottom {
+footer .footer .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 @media screen and (max-width: 600px) {
-  .footer-bottom {
+  footer .footer .footer-bottom {
     height: 14vh;
   }
 }
-
-.footer-bottom a img {
+footer .footer .footer-bottom a img {
   width: 45px;
   height: 3%;
 }
 @media screen and (max-width: 600px) {
-  .footer-bottom a img {
+  footer .footer .footer-bottom a img {
     width: 35px;
   }
 }
-
-#whatup {
+footer .footer .footer-bottom #whatup {
   width: 35px;
   height: 2%;
 }
 @media screen and (max-width: 600px) {
-  #whatup {
+  footer .footer .footer-bottom #whatup {
     width: 25px;
   }
 }
