@@ -5,15 +5,14 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-nav{
+
+nav {
+    background-color: rgba(20, 20, 99, 0.849);
     width: 100%;
     height: 60px;
     box-shadow: 0 0 10px #000;
-    background-color: rgba(79,160,236);
-    position: sticky;
-    top: 0;
-    /* z-index: 111; */
 }
+
 header {
     width: 80%;
     height: 60px;
@@ -23,11 +22,11 @@ header {
     align-items: center;
 }
 
-.logo{
+.logo {
+    flex: 0.4;
     color: white;
     font-size: 25px;
     text-decoration: none;
-    flex: 0.4;
     list-style: none;
 }
 
@@ -57,11 +56,11 @@ header {
 }
 
 #menu li ul {
+    background-color: #074783;
+    width: 23%;
+    height: 22%;
     display: none;
     position: absolute;
-    width: 19%;
-    height: 22%;
-    background-color: #074783;
     margin-top: 11px;
     padding: 10px;
     border-radius: 6px;
@@ -70,7 +69,6 @@ header {
 #menu li ul li {
     margin-top: 15px;
     list-style: none;
-    z-index: 1;
 }
 
 #menu li ul li a:hover {
@@ -79,35 +77,36 @@ header {
 
 #dropdown:hover ul {
     display: block;
-    
 }
 
-.search-box{
+.search-box {
     flex: 0.7;
     position: relative;
 }
-.search-box input{
+
+.search-box input {
+    background-color: #dfd7d7;
     width: 100%;
     height: 36px;
     border: none;
     outline: none;
-    background-color: #dfd7d7;
     border-radius: 9px;
     color: gray;
     font-size: 18px;
     padding-left: 10%;
 }
-button{
-    cursor: pointer;
+
+button {
+    background-color: #dfd7d7;
     width: 45px;
     height: 36px;
+    cursor: pointer;
     border-radius: 9px;
     border: none;
     position: absolute;
     top: 0;
     right: 0;
     transform: scale(0.9);
-    background-color: #dfd7d7;
 }
 
 .list {
@@ -125,13 +124,13 @@ ul li:hover ul {
 
 .list li ul {
     background-color: #074783;
-    position: absolute;
     width: 200px;
+    position: absolute;
     display: none;
 }
 
 .list li ul li {
-    display: block; 
+    display: block;
     padding: 10px;
 }
 
@@ -143,13 +142,7 @@ ul li:hover ul {
 
 .list li ul li:hover {
     background-color: #376b9b;
-}
-.navbar>section{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    color: white;
-    font-size: 25px;
+    border-radius: 9px;
 }
 main {
     background-image: url(../COVID19_Public_Library_VIEW_13.jpg);
@@ -412,6 +405,9 @@ ul li{
     .list{
         display: none;
     }
+    #menu li ul {
+        height: 30vh;
+    }
     .open{
         height: 45vh;
         width: 60%;
@@ -577,7 +573,7 @@ ul li{
     }
 
     footer{
-        height: 77vh;
+        height: 80vh;
   }
   .footer{
         padding-left: 10px;
@@ -594,6 +590,7 @@ ul li{
   }
   .cu-group{
         display: flex;
+        
   }
   .cu-item a{
         display: flex;
@@ -609,6 +606,10 @@ ul li{
   }
   p{
         font-size: 12px;
+  }
+  .footer-bottom{
+    margin-top: 20px;
+    /* height:10vh; */
   }
 
 }
