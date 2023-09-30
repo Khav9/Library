@@ -1,0 +1,142 @@
+.book-page {
+      width: 80%;
+      margin: auto;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+}
+
+.tittle {
+      font-size: 26px;
+      font-weight: bold;
+      padding: 0 0 15px 0;
+      @include responsive(Tablet){
+            font-size: 23px;
+            font-weight: bold;
+      }
+}
+
+.tittle-book {
+      font-size: 20px;
+      @include responsive(Tablet){
+            font-size: 18px;
+      }
+}
+.tittle-book:hover{
+      cursor: pointer;
+      color: blueviolet;
+}
+p{
+      @include responsive(Tablet){
+            font-style: 14px;
+      }
+}
+.contain-card {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px 15px;
+      @include responsive(Tablet){
+            grid-template-columns: repeat(3,1fr);
+            gap: 2px 15px;
+      }
+      @include responsive(Mobile){
+            grid-template-columns: 1fr;
+            gap: 2px 15px;
+      }
+}
+
+.card {
+      width: 100%;
+      height: 444px;
+      display: flex;
+      flex-direction: column;
+      margin: 5px 0;
+      gap: 3px;
+      @include responsive(Tablet){
+            width: 85%;
+            height: 430px;
+      }
+      @include responsive(Mobile){
+            height: 183px;
+            display: flex;
+            flex-direction: row;
+            padding-left: 30px;
+      }
+}
+
+.gp-pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+img {
+      width: 100%;
+      height: 330px;
+      @include responsive(Tablet){
+            height: 280px;
+      }
+      @include responsive(Mobile){
+            width: 120px;
+            height: 180px;
+      }
+}
+.card .gp-pic img{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+      @include responsive(Desktop){
+            position: relative;
+            z-index: -1;
+      }
+      @include responsive(Laptop){
+            position: relative;
+            z-index: -1;
+      }
+      @include responsive(Tablet){
+            position: relative;
+            z-index: -1;
+      }
+      @include responsive(Mobile){
+            position: relative;
+            z-index: -1;
+      }
+}
+.gp-pic:hover img {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+      cursor: pointer;
+}
+.material-symbols-outlined,.material-symbols-rounded{
+      color: yellow;
+}
+.pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      @include responsive(Mobile){
+            margin-top: 15px;
+      }
+}
+
+.pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid rgb(138, 132, 132);
+}
+
+.pagination a.active {
+      background-color: rgba(20, 20, 99, 0.849);
+      color: white;
+      border: 1px solid rgba(20, 20, 99, 0.849);
+}
+
+.pagination a:hover:not(.active) {
+      background-color: rgba(20, 20, 99, 0.849);
+      color: white;
+}

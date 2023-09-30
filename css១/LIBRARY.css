@@ -2,7 +2,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: sans-serif;
+      font-family: 'Poppins', sans-serif;
 }
 
 nav {
@@ -19,14 +19,6 @@ header {
       display: flex;
       flex-direction: row;
       align-items: center;
-}
-
-.logo {
-      flex: 0.4;
-      color: white;
-      font-size: 25px;
-      text-decoration: none;
-      list-style: none;
 }
 
 #menu {
@@ -56,8 +48,8 @@ header {
 
 #menu li ul {
       background-color: #074783;
-      width: 23%;
-      height: 22%;
+      width: 280px;
+      height: 140px;
       display: none;
       position: absolute;
       margin-top: 11px;
@@ -309,7 +301,6 @@ ul li {
 
       .card {
             width: 85%;
-
             height: 430px;
       }
 
@@ -352,6 +343,7 @@ ul li {
       #menu {
             display: none;
       }
+    
       .search-box{
             flex: 0.5;
       }

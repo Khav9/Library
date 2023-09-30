@@ -1,0 +1,142 @@
+@import "../main.scss";
+.navbar>section {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      font-size: 25px;
+  }
+  
+  main {
+      animation: 5s linear 0s infinite running youSlide;
+  }
+  
+  @keyframes youSlide {
+      10% {
+          background-color: white;
+      }
+  
+      20% {
+          background-color: #69b64d48;
+      }
+  
+      50% {
+          background-color: rgba(13, 132, 206, 0.644);
+      }
+  }
+  
+  .banner {
+      height: 60vh;
+  
+  }
+  
+  .banner-event {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-image: url(../PIC/Imgevent/bg3.png);
+  }
+  
+  .title-event {
+      height: 30vh;
+      width: 120vh;
+      transition: .6s;
+      padding: 4vh;
+      font-size: 26px;
+      border-radius: 2vh;
+      background-color: #00000048;
+  }
+  
+  .title-event h1 {
+      font-size: 55px;
+      animation: 4s linear 0s infinite running mySlide;
+  }
+  
+  @keyframes mySlide {
+      from {
+          margin-left: 20%
+      }
+  
+      to {
+          margin-left: 0%
+      }
+  }
+  
+  h1,
+  .title-event p {
+      margin-left: 3vh;
+      margin-bottom: 2vh;
+      color: white;
+  }
+  
+  .past-event {
+      margin: 80px;
+  }
+  
+  .incoming-event {
+      margin: 80px;
+  
+  }
+  
+  .past-event h1,
+  .incoming-event h1 {
+      color: black;
+      font-size: 45px;
+  }
+  
+  .img {
+      transition: 2s;
+      width: 60vh;
+      height: 45vh;
+      display: grid;
+      margin-top: 5vh;
+  }
+  
+  .card {
+      width: 182vh;
+      border-bottom: 9px solid rgba(128, 128, 128, 0.268);
+      border-right: 4px solid rgba(128, 128, 128, 0.268);
+      border-radius: 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card:hover {
+      background-color: white;
+  }
+  
+  .title-imgevent-past {
+      font-size: 26px;
+      margin-left: 5vh;
+  
+  }
+  
+  .title-imgevent-past h2 {
+      font-size: 35px;
+      width: 100vh;
+      margin-top: 5vh;
+  }
+  
+  .title-imgevent-past p {
+      width: 114vh;
+  }
+  
+  .g-icon {
+      width: 20vh;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .icon {
+      width: 50vh;
+      display: flex;
+      align-items: center;
+  }
+  
+  .icon p {
+      margin-left: 10px;
+  }
+  
+  

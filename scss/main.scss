@@ -1,0 +1,6 @@
+@import "./component/nav";
+@import "../scss/component/mixin";
+@import "./component/footer";
+*{
+      @include universe;
+}

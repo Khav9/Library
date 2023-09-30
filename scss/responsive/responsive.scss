@@ -1,0 +1,11 @@
+$breakpionts:(
+      'Mobile':600px,
+      'Tablet':900px,
+      'Laptop':1024px,
+      'Desktop':1400px
+);
+@mixin responsive($size){
+      @media screen and (max-width: map-get($breakpionts,$size)){
+            @content;
+      }
+}
