@@ -9,12 +9,17 @@
     height: 90vh;
     background-image: url(../COVID19_Public_Library_VIEW_13.jpg);
 }
-nav{
+
+nav {
     width: 100%;
     height: 60px;
     box-shadow: 0 0 10px #000;
-    background-color: rgba(20, 20, 99, 0.849);
+    background-color: rgba(79, 160, 236);
+    position: sticky;
+    top: 0;
+
 }
+
 header {
     width: 80%;
     height: 60px;
@@ -24,7 +29,7 @@ header {
     align-items: center;
 }
 
-.logo{
+.logo {
     color: white;
     font-size: 25px;
     text-decoration: none;
@@ -81,11 +86,12 @@ header {
     display: block;
 }
 
-.search-box{
+.search-box {
     flex: 0.7;
     position: relative;
 }
-.search-box input{
+
+.search-box input {
     width: 100%;
     height: 36px;
     border: none;
@@ -96,7 +102,8 @@ header {
     font-size: 18px;
     padding-left: 10%;
 }
-button{
+
+button {
     width: 45px;
     height: 36px;
     cursor: pointer;
@@ -108,40 +115,75 @@ button{
     transform: scale(0.9);
     background-color: #dfd7d7;
 }
+
 .list {
     display: inline;
     color: azure;
 }
+
 .list li {
     display: inline-block;
 }
+
 ul li:hover ul {
     display: block;
 }
+
 .list li ul {
     width: 200px;
     position: absolute;
     display: none;
     background-color: #074783;
 }
+
 .list li ul li {
-    display: block; 
+    display: block;
     padding: 10px;
 }
+
 .list li ul li a {
     display: block !important;
     color: azure;
     text-decoration: none;
 }
+
 .list li ul li:hover {
     background-color: #376b9b;
 }
-.banner{
+
+.navbar>section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    color: white;
+    font-size: 25px;
+}
+
+nav main {
+    animation: 5s linear 0s infinite running youSlide;
+}
+
+@keyframes youSlide {
+    10% {
+        background-color: white;
+    }
+
+    20% {
+        background-color: #69b64d48;
+    }
+
+    50% {
+        background-color: rgba(13, 132, 206, 0.644);
+    }
+}
+
+.banner {
     height: 60vh;
 
 }
-.banner-event{
-    height: 78vh;
+
+.banner-event {
+    height: 90vh;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
@@ -149,81 +191,108 @@ ul li:hover ul {
     background-image: url(../PIC/Imgevent/bg3.png);
 }
 
-.title-event{
+.title-event {
     height: 30vh;
     width: 120vh;
+    transition: .6s;
     padding: 4vh;
     font-size: 26px;
     border-radius: 2vh;
-    background-color:#00000048;
-}
-.title-event h1{
-    font-size: 55px;
-}
-h1,.title-event p{
-   margin-left: 3vh;
-   margin-bottom: 2vh;
-    color: white;
-}
-.past-event{
-    margin: 80px;
-}
-.incoming-event{
-    margin: 80px;
-  
+    background-color: #00000048;
 }
 
-.img{
+.title-event h1 {
+    font-size: 55px;
+    animation: 4s linear 0s infinite running mySlide;
+}
+
+@keyframes mySlide {
+    from {
+        margin-left: 20%
+    }
+
+    to {
+        margin-left: 0%
+    }
+}
+
+h1,
+.title-event p {
+    margin-left: 3vh;
+    margin-bottom: 2vh;
+    color: white;
+}
+
+.past-event {
+    margin: 80px;
+}
+
+.incoming-event {
+    margin: 80px;
+
+}
+
+.past-event h1,
+.incoming-event h1 {
+    color: black;
+    font-size: 45px;
+}
+
+.img {
+    transition: 2s;
     width: 60vh;
     height: 45vh;
     display: grid;
     margin-top: 5vh;
-
 }
 
-.card{
-    width: 180vh;
+.card {
+    width: 182vh;
+    border-bottom: 9px solid rgba(128, 128, 128, 0.268);
+    border-right: 4px solid rgba(128, 128, 128, 0.268);
+    border-radius: 15px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
-.title-imgevent-past{
+
+.card:hover {
+    background-color: white;
+}
+
+.title-imgevent-past {
     font-size: 26px;
     margin-left: 5vh;
-    
+
 }
-.text{
+
+.title-imgevent-past h2 {
+    font-size: 35px;
+    width: 100vh;
     margin-top: 5vh;
 }
 
-.title-imgevent-past h2{
-    font-size: 35px;
-    width: 100vh;
+.title-imgevent-past p {
+    width: 114vh;
 }
-.title-imgevent-past p{
-    width: 120vh;
-}
-.g-icon{
+
+.g-icon {
     width: 20vh;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
-.icon{
+
+.icon {
     width: 50vh;
     display: flex;
     align-items: center;
 }
-.icon p{
+
+.icon p {
     margin-left: 10px;
 }
-.past-event h1{
-    color: black;
-    font-size: 45px;
-}
-.incoming-event h1{
-    color: black;
-    font-size: 45px;
-}
+
+
 
 
 @media(min-width:1024px) {
@@ -231,190 +300,257 @@ h1,.title-event p{
         display: none;
     }
 }
+
 @media(min-width:768px) and (max-width:1023px) {
-    .list{
+    .list {
         display: none;
     }
+
     #menu li {
         width: 7vh;
         font-size: 10px;
     }
-    
-    .logo{
+
+    .logo {
         font-size: 15px;
         flex: 0.3;
     }
-    .title-event{
+
+    .title-event {
         width: 65vh;
         padding: 2vh;
     }
-    .card{
-        display: flex;
-        
+
+    .card {
+        display: grid;
+
     }
-    .incoming-event, .past-event{
+
+    .card:hover {
+        background-color: #dfd7d7;
+    }
+
+    .incoming-event,
+    .past-event {
         margin: 30px;
     }
-    .img{
+
+    .img {
         width: 35vh;
         height: 25vh;
     }
-    .text, .img{
+
+
+    .text-img,
+    .img {
         margin-top: 5px;
-        
+
     }
-   
-    .text h2{
+
+    .text-img h2 {
         font-size: 20px;
     }
-    .past-event p{
+
+    .past-event p {
         font-size: 13px;
     }
-    .title-imgevent-past p{
+
+    .title-imgevent-past p {
         width: 50vh;
-       
-       
+
+
     }
-    .g-icon{
+
+    .card {
+        width: 100%;
+    }
+
+    .g-icon {
         gap: 5px;
         margin-top: 0;
 
     }
-    .icon i{
+
+    .icon i {
         width: 7px;
-       
+
     }
-    .icon p{
+
+    .icon p {
         margin-left: 25px;
     }
-    .incoming-event p{
+
+    .incoming-event p {
         font-size: 13px;
 
     }
-    
-   
-    
+
+
+
 }
+
 @media (min-width:320px) and (max-width:767px) {
-    .logo h3{
-        display: none;
-       
+    nav {
+        height: 40px;
     }
-    .list h2{
+
+    .logo h3 {
+        display: none;
+
+    }
+
+    .list h2 {
         font-size: 15px;
     }
-    #menu{
+
+    #menu {
         display: none;
     }
-    .list{
+
+    .list {
         width: 30vh;
     }
-    .title-event{
+
+    .title-event {
         width: 55vh;
         padding: 0vh;
         font-size: 8px;
     }
-    .title-event h1{
+
+    .title-event h1 {
         font-size: 20px;
 
     }
-    .banner-event{
+
+    .banner-event {
         height: 50vh;
         width: 100%;
     }
-    nav{
-        height: 40px;
-        
-    }
-    .search-box input{
+
+    .search-box input {
         width: 100%;
         height: 20px;
         font-size: small;
     }
-    
-    button{
+
+    button {
         width: 20px;
         height: 3px;
- 
-    }
-    .incoming-event h1,.past-event  h1{
-        font-size: 19px;
-    }
-    .text{
-        height: 50vh;
-        margin-top: 0vh;
-      
-    }
-    .text p ,.icon p{
-        font-size:12px;
 
     }
-    .text h2,.text p, .text, .title-imgevent-past{
-        width: 85vh;
+
+    .incoming-event h1,
+    .past-event h1 {
+        font-size: 19px;
     }
-    
-    .text h2 ,.text p{
+
+    .text-img {
+        width: 0%;
+        height: 50vh;
         margin-top: 0vh;
-    
+
     }
-    .img{
+
+    .text-img p,
+    .icon p {
+        font-size: 12px;
+
+    }
+
+    .text-img h2,
+    .text-img p,
+    .text-img,
+    .title-imgevent-past {
+        width: 75vh;
+    }
+
+    .text-img h2,
+    .text-img p {
+        margin-top: 0vh;
+
+    }
+
+    .img {
         width: 100%;
         margin-top: 0px;
-        
+
     }
-    .img img{
+
+    .img img {
         height: 45vh;
     }
-    .g-icon{
+
+    .g-icon {
         margin-top: 0vh;
         width: 10px;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    .icon{
+
+    .icon {
         width: 120px;
         height: 20vh;
         display: flex;
         align-items: center;
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    .icon i{
-        width: 10vh;
-        height: 15px;
+
+    .icon i {
+        width: 1vh;
+        height: 5px;
         margin-left: 7vh;
     }
-    .icon p{
+
+    .icon p {
         height: 15px;
         width: 120px;
         margin-top: 5vh;
+        font-size: 10px;
     }
-    .icon:nth-child(2){
+
+    .icon:nth-child(2) {
         display: none;
     }
-    .card{
-        width: 94vh;
-        height: 140vh;
+
+    .card {
+        width: 100%;
+        height: 125vh;
+        border-right: none;
         gap: 0px;
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    .incoming-event,.past-event{
+
+    .incoming-event,
+    .past-event {
         margin: 10px;
 
     }
-    .title-imgevent-past{
+
+    .title-imgevent-past {
         height: 70vh;
         display: grid;
         gap: 0px;
+
     }
-    .title-imgevent-past h2{
-        font-size: 15px;
+
+    .title-imgevent-past p {
+        width: 110%;
+    }
+
+    .title-imgevent-past h2 {
+        font-size: 17px;
         margin-bottom: 0vh;
     }
-    
-    
-  
+
+    .card:hover {
+        background-color: #dfd7d7;
+        transition: 2s;
+    }
+
+
+
 
 
 }
