@@ -495,8 +495,7 @@ h1,
 }
 
 @media screen and (max-width: 900px) {
-  .text-img,
-  .img {
+  .text-img, .img {
     margin-top: 5px;
   }
 }
@@ -534,7 +533,7 @@ h1,
   .title-imgevent-past {
     height: 45vh;
     width: 86%;
-    margin-top: 7vh;
+    margin-top: 15vh;
     margin-left: 0;
   }
 }

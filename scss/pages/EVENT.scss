@@ -204,8 +204,7 @@ h1,
     }
 }
 
-.text-img,
-.img {
+.text-img,.img {
     @include responsive(Tablet) {
         margin-top: 5px;
     }
@@ -244,7 +243,7 @@ h1,
     @include responsive(Mobile) {
         height: 45vh;
         width: 86%;
-        margin-top: 7vh;
+        margin-top: 15vh;
         margin-left: 0;
 
     }

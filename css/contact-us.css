@@ -449,11 +449,7 @@ form > button {
 
 .Range input,
 #submit,
-<<<<<<< HEAD
 .submit {
-=======
-.submit, button {
->>>>>>> 93ea17863bae198ea6554a034b7a3b2e10684c62
   cursor: pointer;
 }
 
@@ -510,13 +506,8 @@ form > button {
   background-color: #376b9b;
 }
 
-<<<<<<< HEAD
 #submit {
   width: 100%;
-=======
-#submit, .submit button {
-  width: 20vh;
->>>>>>> 93ea17863bae198ea6554a034b7a3b2e10684c62
   font-size: 22px;
   border-radius: 10px;
   border: none;
