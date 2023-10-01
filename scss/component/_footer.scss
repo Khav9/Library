@@ -1,3 +1,4 @@
+@import "./variable";
 footer {
       background-color: rgba(79, 79, 79, 1);
       height: 47vh;
@@ -12,7 +13,7 @@ footer {
             margin: 0 10%;
             display: flex;
             flex-direction: column;
-            color: rgb(212, 202, 202);
+            color:$footer-color;
             @include responsive(Mobile){
                   padding-left: 10px;
                   margin: 0;
@@ -24,7 +25,7 @@ footer {
                   list-style: none;
                   a {
                         text-decoration: none;
-                        color: rgb(212, 202, 202);
+                        color: $footer-color;
                   }
                   ul li{
                         text-decoration: none;
@@ -58,18 +59,14 @@ footer {
                                     display: flex;
                                     gap: 15px;
                                     @include responsive(Mobile){
-                                          display: flex;
-                                          align-items: center;
-                                          justify-content: center;
+                                          @include centered;
                                     }
                               }
                         }
                   }
             }
             .footer-bottom {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
+                  @include centered;
                   gap: 30px;
                   @include responsive(Mobile){
                         height: 14vh;

@@ -1,122 +1,128 @@
+@import "./mixin";
+@import "./variable";
+
 .book-page {
       width: 80%;
       margin: auto;
       margin-top: 15px;
       display: flex;
       flex-direction: column;
+      @include responsive(Mobile){
+            width: 100%;
+      }
+}
 
-      .tittle {
-            font-size: 26px;
+.tittle {
+      font-size: 26px;
+      font-weight: bold;
+      padding: 0 0 15px 0;
+
+      @include responsive(Tablet) {
+            font-size: 23px;
             font-weight: bold;
-            padding: 0 0 15px 0;
+      }
+}
 
-            @include responsive(Tablet) {
-                  font-size: 23px;
-                  font-weight: bold;
-            }
+.contain-card {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px 15px;
+
+      @include responsive(Tablet) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px 15px;
       }
 
-      .contain-card {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px 15px;
+      @include responsive(Mobile) {
+            grid-template-columns: 1fr;
+            gap: 2px 15px;
+      }
+
+      .card {
+            width: 100%;
+            height: 444px;
+            display: flex;
+            flex-direction: column;
+            margin: 5px 0;
+            gap: 3px;
 
             @include responsive(Tablet) {
-                  grid-template-columns: repeat(3, 1fr);
-                  gap: 2px 15px;
+                  width: 85%;
+                  height: 430px;
             }
 
             @include responsive(Mobile) {
-                  grid-template-columns: 1fr;
-                  gap: 2px 15px;
+                  height: 183px;
+                  display: flex;
+                  flex-direction: row;
+                  padding-left: 30px;
             }
 
-            .card {
-                  width: 100%;
-                  height: 444px;
-                  display: flex;
-                  flex-direction: column;
-                  margin: 5px 0;
-                  gap: 3px;
+            .gp-pic {
+                  @include centered;
 
-                  @include responsive(Tablet) {
-                        width: 85%;
-                        height: 430px;
+
+                  img {
+                        width: 100%;
+                        height: 330px;
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        -webkit-transition: .3s ease-in-out;
+                        transition: .3s ease-in-out;
+
+                        @include responsive(Tablet) {
+                              height: 280px;
+                              position: relative;
+                              z-index: -1;
+                        }
+
+                        @include responsive(Mobile) {
+                              width: 120px;
+                              height: 180px;
+                              position: relative;
+                              z-index: -1;
+                        }
+
+                        @include responsive(Desktop) {
+                              position: relative;
+                              z-index: -1;
+                        }
+
+                        @include responsive(Laptop) {
+                              position: relative;
+                              z-index: -1;
+                        }
+                  }
+            }
+
+            .gp-pic:hover img {
+                  -webkit-transform: scale(0.9);
+                  transform: scale(0.9);
+                  cursor: pointer;
+            }
+
+            .describe-book {
+                  .tittle-book {
+                        font-size: 20px;
+
+                        @include responsive(Tablet) {
+                              font-size: 18px;
+                        }
                   }
 
-                  @include responsive(Mobile) {
-                        height: 183px;
-                        display: flex;
-                        flex-direction: row;
-                        padding-left: 30px;
-                  }
-
-                  .gp-pic {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        img {
-                              width: 100%;
-                              height: 330px;
-                              -webkit-transform: scale(1);
-                              transform: scale(1);
-                              -webkit-transition: .3s ease-in-out;
-                              transition: .3s ease-in-out;
-
-                              @include responsive(Tablet) {
-                                    height: 280px;
-                                    position: relative;
-                                    z-index: -1;
-                              }
-
-                              @include responsive(Mobile) {
-                                    width: 120px;
-                                    height: 180px;
-                                    position: relative;
-                                    z-index: -1;
-                              }
-
-                              @include responsive(Desktop) {
-                                    position: relative;
-                                    z-index: -1;
-                              }
-
-                              @include responsive(Laptop) {
-                                    position: relative;
-                                    z-index: -1;
-                              }
-                        } 
-                  }
-                  .gp-pic:hover img {
-                        -webkit-transform: scale(0.9);
-                        transform: scale(0.9);
+                  .tittle-book:hover {
                         cursor: pointer;
+                        color: blueviolet;
                   }
 
-                  .describe-book {
-                        .tittle-book {
-                              font-size: 20px;
+                  .material-symbols-outlined,
+                  .material-symbols-rounded {
+                        color: yellow;
+                  }
 
-                              @include responsive(Tablet) {
-                                    font-size: 18px;
-                              }
-                        }
-
-                        .tittle-book:hover {
-                              cursor: pointer;
-                              color: blueviolet;
-                        }
-
-                        .material-symbols-outlined,
-                        .material-symbols-rounded {
-                              color: yellow;
-                        }
-
-                        p {
-                              @include responsive(Tablet) {
-                                    font-style: 14px;
-                              }
+                  p {
+                        @include responsive(Tablet) {
+                              font-style: 14px;
                         }
                   }
             }
@@ -124,9 +130,7 @@
 }
 
 .pagination {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include centered;
       margin-bottom: 25px;
 
       @include responsive(Mobile) {
@@ -143,13 +147,13 @@
       }
 
       a.active {
-            background-color: rgba(20, 20, 99, 0.849);
-            color: white;
-            border: 1px solid rgba(20, 20, 99, 0.849);
+            background-color: $bg-cr;
+            color: $main-cr;
+            border: 1px solid $bg-cr;
       }
 
       a:hover:not(.active) {
-            background-color: rgba(20, 20, 99, 0.849);
-            color: white;
+            background-color: $bg-cr;
+            color: $main-cr;
       }
 }
