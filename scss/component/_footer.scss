@@ -1,3 +1,4 @@
+@import "./variable";
 footer {
       background-color: rgba(79, 79, 79, 1);
       height: 47vh;
@@ -8,94 +9,82 @@ footer {
       @include responsive(Mobile){
             height: 93vh;
       }
-}
-
-.footer {
-      margin: 0 10%;
-      display: flex;
-      flex-direction: column;
-      color: rgb(212, 202, 202);
-      @include responsive(Mobile){
-            padding-left: 10px;
-            margin: 0;
-      }
-}
-
-.footer-top {
-      height: 35vh;
-      display: flex;
-      justify-content: space-between;
-      @include responsive(Tablet){
-            height: 29vh;
-      }
-      @include responsive(Mobile){
-            height: 75vh;
-            flex-direction: column;
-      }
-}
-
-.footer-right{
-      @include responsive(Mobile){
-            display: flex;
-            gap: 10px;
-      }
-}
-
-ul li {
-      list-style: none;
-}
-
-.footer a {
-      text-decoration: none;
-      color: rgb(212, 202, 202);
-}
-
-.footer a:hover {
-      color: blueviolet;
-}
-
-.cu-group {
-      display: grid;
-      gap: 10px;
-      @include responsive(Mobile){
+      .footer {
+            margin: 0 10%;
             display: flex;
             flex-direction: column;
-            align-items: start;
-      }
-}
-
-.cu-item a {
-      display: flex;
-      gap: 15px;
-      @include responsive(Mobile){
-            display: flex;
-            align-items: center;
-            justify-content: center;
-      }
-}
-
-.footer-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      @include responsive(Mobile){
-            height: 14vh;
-      }
-}
-
-.footer-bottom a img {
-      width: 45px;
-      height: 3%;
-      @include responsive(Mobile){
-            width: 35px;
-      }
-}
-
-#whatup {
-      width: 35px;
-      height: 2%;
-      @include responsive(Mobile){
-            width: 25px;
+            color:$footer-color;
+            @include responsive(Mobile){
+                  padding-left: 10px;
+                  margin: 0;
+            }
+            .footer-top {
+                  height: 35vh;
+                  display: flex;
+                  justify-content: space-between;
+                  list-style: none;
+                  a {
+                        text-decoration: none;
+                        color: $footer-color;
+                  }
+                  ul li{
+                        text-decoration: none;
+                        list-style: none;
+                  }
+                  a:hover {
+                        color: blueviolet;
+                  }
+                  @include responsive(Tablet){
+                        height: 29vh;
+                  }
+                  @include responsive(Mobile){
+                        height: 75vh;
+                        flex-direction: column;
+                  }
+                 
+                  .footer-right{
+                        @include responsive(Mobile){
+                              display: flex;
+                              gap: 10px;
+                        }
+                        .cu-group {
+                              display: grid;
+                              gap: 10px;
+                              @include responsive(Mobile){
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: start;
+                              }
+                              .cu-item a{
+                                    display: flex;
+                                    gap: 15px;
+                                    @include responsive(Mobile){
+                                          @include centered;
+                                    }
+                              }
+                        }
+                  }
+            }
+            .footer-bottom {
+                  @include centered;
+                  gap: 30px;
+                  @include responsive(Mobile){
+                        height: 14vh;
+                  }
+                  a img {
+                        width: 45px;
+                        height: 3%;
+                        @include responsive(Mobile){
+                              width: 35px;
+                        }
+                  }
+                  #whatup {
+                        width: 35px;
+                        height: 2%;
+                        @include responsive(Mobile){
+                              width: 25px;
+                        }
+                  }
+            }
       }
 }

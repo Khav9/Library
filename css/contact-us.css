@@ -1,11 +1,10 @@
 nav {
-  background-color: rgba(20, 20, 99, 0.849);
+  background-color: rgb(31, 101, 167);
   width: 100%;
   height: 60px;
   box-shadow: 0 0 10px #000;
 }
-
-header {
+nav header {
   width: 80%;
   height: 60px;
   margin: auto;
@@ -14,7 +13,7 @@ header {
   align-items: center;
 }
 @media screen and (max-width: 600px) {
-  header {
+  nav header {
     width: 100%;
     padding: 0 10px;
     display: flex;
@@ -22,44 +21,89 @@ header {
     justify-content: space-between;
   }
 }
-
-#menu {
+nav header .list {
+  display: inline;
+  color: white;
+}
+@media screen and (max-width: 1400px) {
+  nav header .list {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav header .list {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav header .list {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav header .list {
+    display: inline-block;
+  }
+}
+nav header .list li {
+  display: inline-block;
+}
+nav header .list li ul {
+  background-color: #074783;
+  width: 200px;
+  position: absolute;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  nav header .list li ul {
+    width: 48%;
+    height: 39%;
+    border-radius: 9px;
+  }
+}
+nav header .list li ul li {
+  display: block;
+  padding: 10px;
+}
+nav header .list li ul li a {
+  display: block !important;
+  color: white;
+  text-decoration: none;
+}
+nav header .list li:hover ul {
+  display: block;
+}
+nav header .list li ul li:hover {
+  background-color: #3371ac;
+  border-radius: 9px;
+}
+nav header #menu {
   display: flex;
   list-style: none;
   align-items: center;
   flex: 1;
 }
 @media screen and (max-width: 600px) {
-  #menu {
+  nav header #menu {
     display: none;
   }
 }
-
-@media screen and (max-width: 600px) {
-  .logo h3 {
-    display: none;
-  }
-}
-
-#menu li {
+nav header #menu li {
   margin-right: 33px;
   font-weight: bold;
   font-size: 18px;
 }
-
-#menu li a {
+nav header #menu li a {
   text-decoration: none;
   color: white;
   padding: 12px;
   border-radius: 6px;
 }
-
-#menu li a:hover {
+nav header #menu li a:hover {
   background-color: #074783;
   transform: 0.3s;
 }
-
-#menu li ul {
+nav header #menu li ul {
   background-color: #074783;
   width: 280px;
   height: 140px;
@@ -69,43 +113,26 @@ header {
   padding: 10px;
   border-radius: 6px;
 }
-
-#menu li ul li {
+nav header #menu li ul li {
   margin-top: 15px;
   list-style: none;
 }
-
-#menu li ul li a:hover {
+nav header #menu li ul li a:hover {
   background-color: #376b9b;
 }
-
-#dropdown:hover ul {
+nav header #menu #dropdown:hover ul {
   display: block;
 }
-
-.search-box {
+nav header .search-box {
   flex: 0.7;
   position: relative;
 }
 @media screen and (max-width: 600px) {
-  .search-box {
+  nav header .search-box {
     flex: 0.5;
   }
 }
-
-.search-box input {
-  background-color: #dfd7d7;
-  width: 100%;
-  height: 36px;
-  border: none;
-  outline: none;
-  border-radius: 9px;
-  color: gray;
-  font-size: 18px;
-  padding-left: 10%;
-}
-
-button {
+nav header .search-box button {
   background-color: #dfd7d7;
   width: 45px;
   height: 36px;
@@ -117,68 +144,16 @@ button {
   right: 0;
   transform: scale(0.9);
 }
-
-.list {
-  display: inline;
-  color: azure;
-}
-@media screen and (max-width: 1400px) {
-  .list {
-    display: none;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .list {
-    display: none;
-  }
-}
-@media screen and (max-width: 900px) {
-  .list {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  .list {
-    display: inline-block;
-  }
-}
-
-.list li {
-  display: inline-block;
-}
-
-ul li:hover ul {
-  display: block;
-}
-
-.list li ul {
-  background-color: #074783;
-  width: 200px;
-  position: absolute;
-  display: none;
-}
-@media screen and (max-width: 600px) {
-  .list li ul {
-    width: 48%;
-    height: 39%;
-    border-radius: 9px;
-  }
-}
-
-.list li ul li {
-  display: block;
-  padding: 10px;
-}
-
-.list li ul li a {
-  display: block !important;
-  color: azure;
-  text-decoration: none;
-}
-
-.list li ul li:hover {
-  background-color: #376b9b;
+nav header .search-box [type=search] {
+  background-color: #dfd7d7;
+  width: 100%;
+  height: 36px;
+  border: none;
+  outline: none;
   border-radius: 9px;
+  color: gray;
+  font-size: 18px;
+  padding-left: 10%;
 }
 
 footer {
@@ -196,109 +171,100 @@ footer {
     height: 93vh;
   }
 }
-
-.footer {
+footer .footer {
   margin: 0 10%;
   display: flex;
   flex-direction: column;
-  color: rgb(212, 202, 202);
+  color: rgb(189, 182, 182);
 }
 @media screen and (max-width: 600px) {
-  .footer {
+  footer .footer {
     padding-left: 10px;
     margin: 0;
   }
 }
-
-.footer-top {
+footer .footer .footer-top {
   height: 35vh;
   display: flex;
   justify-content: space-between;
+  list-style: none;
+}
+footer .footer .footer-top a {
+  text-decoration: none;
+  color: rgb(189, 182, 182);
+}
+footer .footer .footer-top ul li {
+  text-decoration: none;
+  list-style: none;
+}
+footer .footer .footer-top a:hover {
+  color: blueviolet;
 }
 @media screen and (max-width: 900px) {
-  .footer-top {
+  footer .footer .footer-top {
     height: 29vh;
   }
 }
 @media screen and (max-width: 600px) {
-  .footer-top {
+  footer .footer .footer-top {
     height: 75vh;
     flex-direction: column;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .footer-right {
+  footer .footer .footer-top .footer-right {
     display: flex;
     gap: 10px;
   }
 }
-
-ul li {
-  list-style: none;
-}
-
-.footer a {
-  text-decoration: none;
-  color: rgb(212, 202, 202);
-}
-
-.footer a:hover {
-  color: blueviolet;
-}
-
-.cu-group {
+footer .footer .footer-top .footer-right .cu-group {
   display: grid;
   gap: 10px;
 }
 @media screen and (max-width: 600px) {
-  .cu-group {
+  footer .footer .footer-top .footer-right .cu-group {
     display: flex;
     flex-direction: column;
     align-items: start;
   }
 }
-
-.cu-item a {
+footer .footer .footer-top .footer-right .cu-group .cu-item a {
   display: flex;
   gap: 15px;
 }
 @media screen and (max-width: 600px) {
-  .cu-item a {
+  footer .footer .footer-top .footer-right .cu-group .cu-item a {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 }
-
-.footer-bottom {
+footer .footer .footer-bottom {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 @media screen and (max-width: 600px) {
-  .footer-bottom {
+  footer .footer .footer-bottom {
     height: 14vh;
   }
 }
-
-.footer-bottom a img {
+footer .footer .footer-bottom a img {
   width: 45px;
   height: 3%;
 }
 @media screen and (max-width: 600px) {
-  .footer-bottom a img {
+  footer .footer .footer-bottom a img {
     width: 35px;
   }
 }
-
-#whatup {
+footer .footer .footer-bottom #whatup {
   width: 35px;
   height: 2%;
 }
 @media screen and (max-width: 600px) {
-  #whatup {
+  footer .footer .footer-bottom #whatup {
     width: 25px;
   }
 }
@@ -325,24 +291,44 @@ form > button {
 
 .banner-event {
   height: 90vh;
+  width: 100%;
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url(../PIC/Imgevent/contact.png);
 }
+@media screen and (max-width: 600px) {
+  .banner-event {
+    height: 90vh;
+  }
+}
 
 .form2 {
   background-color: rgba(0, 0, 0, 0.459);
-  width: 85vh;
-  height: 80vh;
+  width: 42%;
+  height: 85vh;
   margin-left: 95vh;
   border-radius: 10px;
   transition: all 1s;
 }
+@media screen and (max-width: 900px) {
+  .form2 {
+    width: 60%;
+    height: 75vh;
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form2 {
+    width: 65vh;
+    height: 70vh;
+    margin-left: 27vh;
+  }
+}
 
 .form2:hover {
-  background-color: rgba(189, 204, 218, 0.1568627451);
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
 .form2 h3 {
@@ -351,6 +337,11 @@ form > button {
   margin: 3vh;
   color: white;
   animation: 2s linear 0s infinite running mySlide;
+}
+@media screen and (max-width: 600px) {
+  .form2 h3 {
+    font-size: 20px;
+  }
 }
 
 @keyframes mySlide {
@@ -366,19 +357,41 @@ form > button {
   gap: 20px;
 }
 
+.input-name input:hover {
+  background-color: #d4dce4;
+}
+
+#Comment:hover {
+  background-color: #d4dce4;
+}
+
 .input-name input {
-  width: 87%;
+  width: 88%;
   height: 6vh;
   border-radius: 6px;
   border: none;
   font-size: 25px;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  .input-name input {
+    font-size: 15px;
+  }
+}
 
-.input-name input,
-#Comment {
+.input-name input, #Comment {
   margin-left: 5vh;
   background: rgba(255, 255, 255, 0.696);
+}
+@media screen and (max-width: 900px) {
+  .input-name input, #Comment {
+    margin-left: 3.5vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .input-name input, #Comment {
+    margin-left: 4vh;
+  }
 }
 
 .Range,
@@ -393,30 +406,50 @@ form > button {
   grid-template-columns: 1fr;
 }
 
+.radio label {
+  font-size: 15px;
+}
+
 .radio input {
-  width: 2.5vh;
+  width: 100%;
   height: 7vh;
-  background-color: red;
+}
+@media screen and (max-width: 900px) {
+  .radio input {
+    width: 100%;
+    height: 5vh;
+  }
 }
 
 .Range {
   margin-top: 5vh;
-  margin-left: 8vh;
-  font-size: 30px;
+  margin-left: 5vh;
+}
+@media screen and (max-width: 900px) {
+  .Range {
+    margin-left: 4vh;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Range {
+    display: none;
+  }
 }
 
 .Range,
 #Comment {
-  width: 87%;
+  width: 88%;
 }
 
 .Range h4 {
+  font-size: 20px;
   color: white;
 }
 
 .Range input,
 #submit,
-.submit, button {
+.submit {
   cursor: pointer;
 }
 
@@ -425,29 +458,44 @@ form > button {
   margin-left: 5vh;
   margin-top: 3vh;
   border-radius: 7px;
+  padding-top: 5vh;
   font-size: 25px;
   text-align: center;
   border: none;
 }
-
-.submit button {
-  margin-left: 10vh;
+@media screen and (max-width: 900px) {
+  #Comment {
+    margin-left: 3.5vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  #Comment {
+    width: 88%;
+    margin-left: 4vh;
+    font-size: 15px;
+  }
 }
 
 .submit {
   width: 20px;
-  gap: 20vh;
+  margin-top: 2vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 900px) {
+  .submit {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .submit {
+    display: grid;
+    margin-left: 2vh;
+  }
 }
 
 #submit {
   margin-left: 5vh;
-}
-
-.submit button,
-#submit {
-  margin-top: 5vh;
 }
 
 #submit:hover {
@@ -458,8 +506,8 @@ form > button {
   background-color: #376b9b;
 }
 
-#submit, .submit button {
-  width: 20vh;
+#submit {
+  width: 100%;
   font-size: 22px;
   border-radius: 10px;
   border: none;
@@ -469,6 +517,13 @@ form > button {
   padding-right: 3vh;
   background-color: red;
 }
+@media screen and (max-width: 900px) {
+  #submit {
+    width: 100%;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
 
 .media {
   height: 15vh;
@@ -476,6 +531,11 @@ form > button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .media {
+    display: none;
+  }
 }
 
 .media h2 {
@@ -507,4 +567,74 @@ form > button {
 
 .title-location {
   display: none;
+}
+@media screen and (max-width: 600px) {
+  .title-location {
+    display: flex;
+    margin-left: 40vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    width: 100%;
+    height: 77vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding-left: 10px;
+    margin: 0;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-top {
+    height: 63vh;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-right {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cu-group {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cu-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=CONTACT-US.css.map */

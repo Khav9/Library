@@ -534,19 +534,19 @@ ul li {
         margin-left: 2vh;
     }
 
-    .submit button,
+    /* .button,
     #submit {
         width: 10vh;
         border-radius: 2px;
         font-size: 6px;
         padding: 1vh;
 
-    }
+    } */
 
-    .submit button {
+    /* .submit button {
         margin-left: 8vh;
 
-    }
+    } */
 
     .form2 h3 {
         font-size: 18px;

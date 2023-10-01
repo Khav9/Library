@@ -30,13 +30,13 @@ main {
     border-radius: 5px;
 
     @include responsive(Tablet) {
-        height: 43vh;
-        width: 70%;
+        height: 30vh;
+        width: 60%;
         font-size: 23px;
     }
     @include responsive(Mobile){
-        height: 30vh;
-        width: 60%;
+        height: 20vh;
+        width: 65%;
         font-size: 15px;
     }
 }
