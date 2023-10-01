@@ -4,3 +4,8 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
 }
+@mixin centered{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
