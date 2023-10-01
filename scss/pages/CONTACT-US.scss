@@ -21,8 +21,12 @@ form>button {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image: url(../PIC/Imgevent/contact.png);
+    @include responsive(Tablet) {
+       height: 70vh;
+       
+    }
     @include responsive (Mobile){
-        height: 90vh;
+        height: 50vh;
     }
 }
 
@@ -34,14 +38,14 @@ form>button {
     border-radius: 10px;
     transition: all 1s;
     @include responsive(Tablet) {
-        width: 60%;
-        height: 75vh;
+        width: 65%;
+        height: 60vh;
         margin-left: 30%;
     }
     @include responsive (Mobile) {
-        width: 65vh;
-        height: 70vh;
-        margin-left: 27vh;
+        width: 68%;
+        height: 44vh;
+        margin-left: 10vh;
     }
 }
 .form2:hover {
@@ -89,7 +93,7 @@ form>button {
     text-align: center;
    
     @include responsive (Mobile){
-        font-size: 15px;
+        font-size: 12px;
     }
    
 
@@ -104,6 +108,8 @@ form>button {
      }
     @include responsive (Mobile){
         margin-left: 4vh;
+        height: 4vh;
+        width: 76%;
   
     }
 
@@ -138,6 +144,7 @@ form>button {
     @include responsive(Tablet) {
         margin-left: 4vh;
         font-size: 20px;
+        display: none;
     }
     @include responsive (Mobile){
         display: none;
@@ -174,7 +181,9 @@ form>button {
         margin-left: 3.5vh;
     }
     @include responsive (Mobile){
-        width: 88%;
+        width: 76%;
+        height: 10vh;
+        padding-top: 3vh;
         margin-left: 4vh;
         font-size: 15px;
     }
@@ -223,6 +232,16 @@ form>button {
         padding-left: 1px;
         padding-right: 1px;
     }
+    @include responsive (Mobile){
+        height: 3vh;
+        width: 100%;
+        padding: 0;
+       font-size: smaller;
+       margin-left: 3vh;
+      
+
+
+    }
 }
 
 .media {
@@ -232,6 +251,10 @@ form>button {
     align-items: center;
     justify-content: center;
     @include responsive (Mobile){
+        display: none;
+
+    }
+    @include responsive (Tablet){
         display: none;
 
     }
@@ -252,6 +275,7 @@ form>button {
     align-items: center;
     justify-content: center;
     gap: 30px;
+   
 }
 
 .map {
@@ -268,7 +292,7 @@ form>button {
     display: none;
     @include responsive (Mobile) {
         display: flex;
-        margin-left: 40vh;
+        margin-left: 20vh;
         margin-top: 10vh;
         margin-bottom: 10vh;
     }

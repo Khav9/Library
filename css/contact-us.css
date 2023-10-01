@@ -298,9 +298,14 @@ form > button {
   background-size: 100% 100%;
   background-image: url(../PIC/Imgevent/contact.png);
 }
+@media screen and (max-width: 900px) {
+  .banner-event {
+    height: 70vh;
+  }
+}
 @media screen and (max-width: 600px) {
   .banner-event {
-    height: 90vh;
+    height: 50vh;
   }
 }
 
@@ -314,16 +319,16 @@ form > button {
 }
 @media screen and (max-width: 900px) {
   .form2 {
-    width: 60%;
-    height: 75vh;
+    width: 65%;
+    height: 60vh;
     margin-left: 30%;
   }
 }
 @media screen and (max-width: 600px) {
   .form2 {
-    width: 65vh;
-    height: 70vh;
-    margin-left: 27vh;
+    width: 68%;
+    height: 44vh;
+    margin-left: 10vh;
   }
 }
 
@@ -375,7 +380,7 @@ form > button {
 }
 @media screen and (max-width: 600px) {
   .input-name input {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
@@ -391,6 +396,8 @@ form > button {
 @media screen and (max-width: 600px) {
   .input-name input, #Comment {
     margin-left: 4vh;
+    height: 4vh;
+    width: 76%;
   }
 }
 
@@ -429,6 +436,7 @@ form > button {
   .Range {
     margin-left: 4vh;
     font-size: 20px;
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
@@ -470,7 +478,9 @@ form > button {
 }
 @media screen and (max-width: 600px) {
   #Comment {
-    width: 88%;
+    width: 76%;
+    height: 10vh;
+    padding-top: 3vh;
     margin-left: 4vh;
     font-size: 15px;
   }
@@ -524,6 +534,15 @@ form > button {
     padding-right: 1px;
   }
 }
+@media screen and (max-width: 600px) {
+  #submit {
+    height: 3vh;
+    width: 100%;
+    padding: 0;
+    font-size: smaller;
+    margin-left: 3vh;
+  }
+}
 
 .media {
   height: 15vh;
@@ -533,6 +552,11 @@ form > button {
   justify-content: center;
 }
 @media screen and (max-width: 600px) {
+  .media {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
   .media {
     display: none;
   }
@@ -571,7 +595,7 @@ form > button {
 @media screen and (max-width: 600px) {
   .title-location {
     display: flex;
-    margin-left: 40vh;
+    margin-left: 20vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
   }
