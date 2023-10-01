@@ -225,7 +225,7 @@ footer .footer .footer-top .footer-right .cu-group {
   footer .footer .footer-top .footer-right .cu-group {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 footer .footer .footer-top .footer-right .cu-group .cu-item a {
@@ -292,33 +292,33 @@ main {
 }
 @media screen and (max-width: 900px) {
   main {
-    height: 90vh;
+    height: 50vh;
   }
 }
 @media screen and (max-width: 600px) {
   main {
-    height: 60vh;
+    height: 40vh;
   }
 }
 
 .open {
   background-color: rgba(19, 66, 110, 0.407);
   width: 50%;
-  height: 50vh;
+  height: 45vh;
   padding: 15px;
   border-radius: 5px;
 }
 @media screen and (max-width: 900px) {
   .open {
-    height: 30vh;
+    height: 23vh;
     width: 60%;
     font-size: 23px;
   }
 }
 @media screen and (max-width: 600px) {
   .open {
-    height: 20vh;
-    width: 65%;
+    height: 27vh;
+    width: 80%;
     font-size: 15px;
   }
 }
@@ -340,6 +340,7 @@ section {
 .popular {
   height: 10vh;
   display: flex;
+  justify-content: space-between;
   padding: 10px;
   align-items: center;
 }
@@ -355,20 +356,16 @@ section {
   }
 }
 
-.right {
-  position: absolute;
-  left: 84%;
-}
 @media screen and (max-width: 900px) {
   .right {
     position: absolute;
-    left: 83%;
+    left: 81%;
   }
 }
 @media screen and (max-width: 600px) {
   .right {
     position: absolute;
-    left: 85%;
+    left: 80%;
   }
 }
 
@@ -390,15 +387,15 @@ section {
 }
 @media screen and (max-width: 900px) {
   .custom-btn {
-    width: 100px;
-    height: 5vh;
+    width: 110px;
+    height: 4vh;
     font-size: 10px;
   }
 }
 @media screen and (max-width: 600px) {
   .custom-btn {
     width: 75px;
-    height: 4vh;
+    height: 3vh;
     font-size: 5px;
   }
 }
@@ -460,13 +457,13 @@ section {
     transform: scale(1.05, 1.05);
   }
   .card img {
-    height: 60vh;
-    width: 80%;
+    height: 35vh;
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
   .card {
-    width: 49%;
+    width: 100%;
     font-size: 10px;
     box-shadow: 0px 8px 15px 0px rgba(4, 2, 2, 0.161);
     position: 1;
@@ -489,22 +486,20 @@ section {
   height: 10vh;
   display: flex;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.event > .right-event {
-  position: absolute;
-  left: 84%;
-}
 @media screen and (max-width: ) {
   .event > .right-event {
     position: absolute;
-    left: 83%;
+    left: 81%;
   }
 }
 @media screen and (max-width: 600px) {
   .event > .right-event {
     position: absolute;
-    left: 85%;
+    left: 80%;
   }
 }
 
@@ -520,6 +515,15 @@ section {
   gap: 20px;
   display: flex;
 }
+@media screen and (max-width: 600px) {
+  .event-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .event-card img {
+    width: 100%;
+  }
+}
 
 .description > .g-icon {
   display: flex;
@@ -532,18 +536,24 @@ section {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 600px) {
+  .description > .g-icon {
+    width: 100%;
+    display: flex;
+  }
+}
 
 #about-library {
   height: 70vh;
 }
 @media screen and (max-width: 900px) {
   #about-library {
-    height: 100vh;
+    height: 70vh;
   }
 }
 @media screen and (max-width: 600px) {
   #about-library {
-    height: 110vh;
+    height: 100vh;
     font-size: 15px;
   }
 }
@@ -591,7 +601,7 @@ section {
   .about-left,
   .about-right {
     width: 100%;
-    height: 40vh;
+    height: 25vh;
   }
 }
 @media screen and (max-width: 600px) {
