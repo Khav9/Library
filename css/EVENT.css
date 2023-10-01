@@ -225,7 +225,7 @@ footer .footer .footer-top .footer-right .cu-group {
   footer .footer .footer-top .footer-right .cu-group {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 footer .footer .footer-top .footer-right .cu-group .cu-item a {
