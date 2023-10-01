@@ -446,7 +446,7 @@ ul li{
         transform: scale(1.05, 1.05);
     }
     .card>img{
-        height: 45vh;
+        height: 50vh;
         width: 65%;
     }
     .event>.right-event{

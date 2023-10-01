@@ -310,6 +310,19 @@ ul li {
   font-family: "Poppins", sans-serif;
 }
 
+form > button {
+  cursor: pointer;
+  width: 45px;
+  height: 36px;
+  border-radius: 9px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0.9);
+  background-color: #dfd7d7;
+}
+
 .banner-event {
   height: 90vh;
   display: flex;
@@ -403,7 +416,7 @@ ul li {
 
 .Range input,
 #submit,
-button {
+.submit, button {
   cursor: pointer;
 }
 
@@ -445,8 +458,7 @@ button {
   background-color: #376b9b;
 }
 
-#submit,
-button {
+#submit, .submit button {
   width: 20vh;
   font-size: 22px;
   border-radius: 10px;
@@ -495,4 +507,4 @@ button {
 
 .title-location {
   display: none;
-}
+}/*# sourceMappingURL=CONTACT-US.css.map */

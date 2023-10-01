@@ -1,1 +1,354 @@
 @import "../main.scss";
+@import "../responsive/responsive.scss";
+
+main {
+    background-image: url(../COVID19_Public_Library_VIEW_13.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    z-index: -1;
+    @include responsive(Tablet){
+        height: 90vh;
+    }
+    @include responsive(Mobile){
+        height: 60vh;
+    }
+}
+
+.open {
+    background-color: rgba(19, 66, 110, 0.407);
+    width: 50%;
+    height: 50vh;
+    padding: 15px;
+    border-radius: 5px;
+
+    @include responsive(Tablet) {
+        height: 43vh;
+        width: 70%;
+        font-size: 23px;
+    }
+    @include responsive(Mobile){
+        height: 30vh;
+        width: 60%;
+        font-size: 15px;
+    }
+}
+
+section {
+    margin: 50px 80px 50px;
+
+    @include responsive(Tablet) {
+        margin: 30px 30px;
+    }
+    @include responsive(Mobile){
+        margin: 0;
+    }
+}
+
+.popular {
+    height: 10vh;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+
+    @include responsive(Tablet) {
+        width: 100%;
+    }
+    @include responsive(Mobile){
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+
+.right {
+    position: absolute;
+    left: 84%;
+
+    @include responsive(Tablet) {
+        position: absolute;
+        left: 83%;
+    }
+    @include responsive(Mobile){
+        position: absolute;
+        left: 85%;
+    }
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+
+    @include responsive(Tablet) {
+        width: 100px;
+        height: 5vh;
+        font-size: 10px;
+    }
+    @include responsive(Mobile) {
+        width: 75px;
+        height: 4vh;
+        font-size: 5px;
+    }
+}
+
+.btn-1 {
+    background: rgba(79, 160, 236);
+    background: linear-gradient(0deg, rgb(73, 142, 222) 30%, rgba(129, 5, 240, 1) 100%);
+    border: none;
+}
+
+.btn-1:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-1:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.card-book {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    height: 80vh;
+
+    @include responsive(Tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    background-color: rgb(211, 223, 233);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px 0px rgba(4, 2, 2, 0.161);
+    position: 1;
+    transition: 0.3s;
+
+    @include responsive(Tablet) {
+        width: 49%;
+        font-size: 18px;
+        box-shadow: 0px 8px 15px 0px rgba(4, 2, 2, 0.161);
+        position: 1;
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.05, 1.05);
+        }
+
+        img {
+            height: 60vh;
+            width: 80%;
+        }
+    }
+    @include responsive(Mobile){
+        width: 49%;
+        font-size: 10px;
+        box-shadow: 0px 8px 15px 0px rgba(4, 2, 2, 0.161);
+        position: 1;
+        transition: 0.3s;
+        &:hover{
+            transform: scale(1.05, 1.05);
+        }
+        img{
+            height:40vh ;
+            width:70% ;
+        }
+        }
+    }
+
+
+.title>.g-icon {
+    color: rgb(231, 231, 7);
+}
+
+.event {
+    height: 10vh;
+    display: flex;
+    padding: 10px;
+
+}
+
+.event>.right-event {
+    position: absolute;
+    left: 84%;
+
+    @include responsive(Table) {
+        position: absolute;
+        left: 83%;
+    }
+    @include responsive(Mobile) {
+        position: absolute;
+        left: 85%;
+    }
+
+}
+
+.event-home {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+
+.event-card {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+}
+
+.description>.g-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include responsive(Tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+#about-library {
+    height: 70vh;
+    @include responsive(Tablet){
+        height: 100vh;
+    }
+    
+    @include responsive(Mobile){
+        height: 110vh;
+        font-size: 15px;
+    }
+
+}
+
+.top {
+    padding: 10px;
+    font-size: 20px;
+    @include responsive(Mobile){
+        font-size: 15px;
+    }
+}
+
+.top>h2 {
+    color: rgb(41, 41, 138);
+}
+
+.des {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    @include responsive(Tablet){
+        display: flex;
+        flex-direction: column; 
+        font-size: 20px;
+    }
+    @include responsive(Mobile){
+        display: flex;
+        flex-direction: column; 
+        font-size: 15px;
+    }
+}
+
+.about-left,
+.about-right {
+    width: 50%;
+    padding: 10px;
+    @include responsive(Tablet){
+        width: 100%;
+        height: 40vh;
+    }
+    @include responsive(Mobile){
+        width: 100%;
+        height: 38vh;
+    }
+}
+
+.about-left,
+.about-right {
+    background-color: rgb(211, 223, 233);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px 0px rgba(4, 2, 2, 0.161);
+    position: 1;
+    transition: 1s;
+
+}
+
+.about-left:hover {
+    transform: scale(1.05, 1.05);
+
+}
+
+.about-right:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.about-left>h4 {
+    padding: 10px;
+}
+
+.about-left>.about-icon>.icon {
+    display: flex;
+}
+
+.about-left,
+.about-right>h4 {
+    padding: 10px;
+
+}
+
+.about-icon {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-icon>.icon {
+    gap: 10px;
+}
+
+.about-center {
+    width: 3px;
+    background-color: #4849469d;
+}
+
+.icon {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}

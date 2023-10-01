@@ -310,30 +310,17 @@ ul li {
   font-family: "Poppins", sans-serif;
 }
 
-.navbar > section {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-size: 25px;
-}
-
-main {
-  animation: 5s linear 0s infinite running youSlide;
-}
-
-@keyframes youSlide {
-  10% {
-    background-color: white;
-  }
-  20% {
-    background-color: rgba(105, 182, 77, 0.2823529412);
-  }
-  50% {
-    background-color: rgba(13, 132, 206, 0.644);
-  }
-}
-.banner {
-  height: 60vh;
+form > button {
+  cursor: pointer;
+  width: 45px;
+  height: 36px;
+  border-radius: 9px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0.9);
+  background-color: #dfd7d7;
 }
 
 .banner-event {
@@ -342,102 +329,182 @@ main {
   align-items: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url(../PIC/Imgevent/bg3.png);
+  background-image: url(../PIC/Imgevent/contact.png);
 }
 
-.title-event {
-  height: 30vh;
-  width: 120vh;
-  transition: 0.6s;
-  padding: 4vh;
-  font-size: 26px;
-  border-radius: 2vh;
-  background-color: rgba(0, 0, 0, 0.2823529412);
+.form2 {
+  background-color: rgba(0, 0, 0, 0.459);
+  width: 85vh;
+  height: 80vh;
+  margin-left: 95vh;
+  border-radius: 10px;
+  transition: all 1s;
 }
 
-.title-event h1 {
-  font-size: 55px;
-  animation: 4s linear 0s infinite running mySlide;
+.form2:hover {
+  background-color: rgba(189, 204, 218, 0.1568627451);
+}
+
+.form2 h3 {
+  text-align: center;
+  font-size: 35px;
+  margin: 3vh;
+  color: white;
+  animation: 2s linear 0s infinite running mySlide;
 }
 
 @keyframes mySlide {
   from {
-    margin-left: 20%;
+    margin-left: 10%;
   }
   to {
     margin-left: 0%;
   }
 }
-h1,
-.title-event p {
+.input-name {
+  display: grid;
+  gap: 20px;
+}
+
+.input-name input {
+  width: 87%;
+  height: 6vh;
+  border-radius: 6px;
+  border: none;
+  font-size: 25px;
+  text-align: center;
+}
+
+.input-name input,
+#Comment {
+  margin-left: 5vh;
+  background: rgba(255, 255, 255, 0.696);
+}
+
+.Range,
+.group-radio {
+  display: flex;
+}
+
+.radio {
+  color: #d4dce4;
   margin-left: 3vh;
-  margin-bottom: 2vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.radio input {
+  width: 2.5vh;
+  height: 7vh;
+  background-color: red;
+}
+
+.Range {
+  margin-top: 5vh;
+  margin-left: 8vh;
+  font-size: 30px;
+}
+
+.Range,
+#Comment {
+  width: 87%;
+}
+
+.Range h4 {
   color: white;
 }
 
-.past-event {
-  margin: 80px;
+.Range input,
+#submit,
+.submit, button {
+  cursor: pointer;
 }
 
-.incoming-event {
-  margin: 80px;
+#Comment {
+  height: 15vh;
+  margin-left: 5vh;
+  margin-top: 3vh;
+  border-radius: 7px;
+  font-size: 25px;
+  text-align: center;
+  border: none;
 }
 
-.past-event h1,
-.incoming-event h1 {
-  color: black;
-  font-size: 45px;
+.submit button {
+  margin-left: 10vh;
 }
 
-.img {
-  transition: 2s;
-  width: 60vh;
-  height: 45vh;
-  display: grid;
-  margin-top: 5vh;
-}
-
-.card {
-  width: 182vh;
-  border-bottom: 9px solid rgba(128, 128, 128, 0.268);
-  border-right: 4px solid rgba(128, 128, 128, 0.268);
-  border-radius: 15px;
+.submit {
+  width: 20px;
+  gap: 20vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.card:hover {
-  background-color: white;
-}
-
-.title-imgevent-past {
-  font-size: 26px;
+#submit {
   margin-left: 5vh;
 }
 
-.title-imgevent-past h2 {
-  font-size: 35px;
-  width: 100vh;
+.submit button,
+#submit {
   margin-top: 5vh;
 }
 
-.title-imgevent-past p {
-  width: 114vh;
+#submit:hover {
+  background-color: #376b9b;
 }
 
-.g-icon {
+.submit button:hover {
+  background-color: #376b9b;
+}
+
+#submit, .submit button {
   width: 20vh;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(1, 1fr);
+  font-size: 22px;
+  border-radius: 10px;
+  border: none;
+  color: wheat;
+  padding: 1.3vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  background-color: red;
 }
 
-.icon {
-  width: 50vh;
+.media {
+  height: 15vh;
+  width: 70vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.icon p {
-  margin-left: 10px;
-}/*# sourceMappingURL=EVENT.css.map */
+.media h2 {
+  font-size: 20px;
+}
+
+.g-media a img {
+  width: 45px;
+  height: 3%;
+  margin-left: 2vh;
+}
+
+.g-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.map {
+  height: 80vh;
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.title-location {
+  display: none;
+}/*# sourceMappingURL=CONTACT-US.min.css.map */
