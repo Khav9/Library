@@ -1,142 +1,363 @@
 @import "../main.scss";
+@import "../responsive/responsive.scss";
+
 .navbar>section {
-      display: flex;
-      flex-direction: column;
-      color: white;
-      font-size: 25px;
-  }
-  
-  main {
-      animation: 5s linear 0s infinite running youSlide;
-  }
-  
-  @keyframes youSlide {
-      10% {
-          background-color: white;
-      }
-  
-      20% {
-          background-color: #69b64d48;
-      }
-  
-      50% {
-          background-color: rgba(13, 132, 206, 0.644);
-      }
-  }
-  
-  .banner {
-      height: 60vh;
-  
-  }
-  
-  .banner-event {
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-image: url(../PIC/Imgevent/bg3.png);
-  }
-  
-  .title-event {
-      height: 30vh;
-      width: 120vh;
-      transition: .6s;
-      padding: 4vh;
-      font-size: 26px;
-      border-radius: 2vh;
-      background-color: #00000048;
-  }
-  
-  .title-event h1 {
-      font-size: 55px;
-      animation: 4s linear 0s infinite running mySlide;
-  }
-  
-  @keyframes mySlide {
-      from {
-          margin-left: 20%
-      }
-  
-      to {
-          margin-left: 0%
-      }
-  }
-  
-  h1,
-  .title-event p {
-      margin-left: 3vh;
-      margin-bottom: 2vh;
-      color: white;
-  }
-  
-  .past-event {
-      margin: 80px;
-  }
-  
-  .incoming-event {
-      margin: 80px;
-  
-  }
-  
-  .past-event h1,
-  .incoming-event h1 {
-      color: black;
-      font-size: 45px;
-  }
-  
-  .img {
-      transition: 2s;
-      width: 60vh;
-      height: 45vh;
-      display: grid;
-      margin-top: 5vh;
-  }
-  
-  .card {
-      width: 182vh;
-      border-bottom: 9px solid rgba(128, 128, 128, 0.268);
-      border-right: 4px solid rgba(128, 128, 128, 0.268);
-      border-radius: 15px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .card:hover {
-      background-color: white;
-  }
-  
-  .title-imgevent-past {
-      font-size: 26px;
-      margin-left: 5vh;
-  
-  }
-  
-  .title-imgevent-past h2 {
-      font-size: 35px;
-      width: 100vh;
-      margin-top: 5vh;
-  }
-  
-  .title-imgevent-past p {
-      width: 114vh;
-  }
-  
-  .g-icon {
-      width: 20vh;
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-  }
-  
-  .icon {
-      width: 50vh;
-      display: flex;
-      align-items: center;
-  }
-  
-  .icon p {
-      margin-left: 10px;
-  }
-  
-  
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+}
+
+main {
+    animation: 5s linear 0s infinite running youSlide;
+}
+
+@keyframes youSlide {
+    10% {background-color: white;}
+
+    20% {background-color: #69b64d48;}
+
+    50% {background-color: rgba(13, 132, 206, 0.644);}
+}
+
+.banner {
+    height: 60vh;
+
+}
+
+.banner-event {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../PIC/Imgevent/bg3.png);
+
+    @include responsive(Mobile) {
+        width: 100%;
+        height: 70vh;
+    }
+    @include responsive(Tablet) {
+        width: 100%;
+        height: 70vh;
+    }
+}
+.title-event {
+    height: 30vh;
+    width: 120vh;
+    transition: .8s;
+    padding: 4vh;
+    font-size: 22px;
+    border-radius: 2vh;
+    background-color: #00000048;
+
+    @include responsive(Tablet) {
+        width: 65vh;
+        padding: 2vh;
+    }
+
+    @include responsive(Mobile) {
+        width: 65vh;
+        height: 30vh;
+        padding: 0vh;
+        padding-right: 1vh;
+        font-size: 16px;
+    }
+}
+
+.title-event h1 {
+    font-size: 55px;
+    animation: 4s linear 0s infinite running mySlide;
+
+    @include responsive(Mobile) {
+        font-size: 35px;
+    }
+}
+
+@keyframes mySlide {
+    from {
+        margin-left: 20%
+    }
+
+    to {
+        margin-left: 0%
+    }
+}
+
+h1,
+.title-event p {
+    margin-left: 3vh;
+    margin-bottom: 2vh;
+    color: white;
+}
+
+.card {
+    width: 100%;
+    border-bottom: 9px solid rgba(128, 128, 128, 0.268);
+    border-right: 4px solid rgba(128, 128, 128, 0.268);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include responsive(Tablet) {
+        display: grid;
+        width: 100%;
+        height: 50vh;
+    }
+
+    @include responsive(Mobile) {
+        width: 100%;
+        height: 110vh;
+        border-right: none;
+        gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card:hover {
+    background-color: white;
+
+}
+
+.past-event,
+.incoming-event {
+    margin: 80px;
+
+    @include responsive(Tablet) {
+        margin: 30px;
+    }
+
+}
+
+.past-event h1,
+.incoming-event h1 {
+    color: black;
+    font-size: 35px;
+
+    @include responsive(Mobile) {
+        font-size: 29px;
+    }
+    
+    @include responsive(Tablet) {
+        font-size: 35px;
+    }
+}
+
+.title-imgevent-past {
+    height: 70vh;
+    display: grid;
+    gap: 0px;
+
+    p {
+        @include responsive(Mobile) {
+            width: 110%;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0vh;
+    }
+}
+.past-event p {
+    @include responsive(Tablet) {
+        font-size: 13px;
+    }
+}
+
+.img img {
+    @include responsive(Tablet) {
+        width: 40vh;
+        height: 45vh;
+        margin-top: 1.5vh;
+      
+    }
+    @include responsive(Mobile) {
+        height: 50vh;
+        width: 122.5%;
+        margin-top: 0;
+    }
+}
+
+.img {
+    transition: 2s;
+    width: 75vh;
+    height: 65vh;
+    display: grid;
+    margin-top: 5vh;
+
+    @include responsive(Tablet) {
+        width: 35vh;
+        height: 25vh;
+    }
+
+    @include responsive(Mobile) {
+        width: 70%;
+        margin-top: 0px;
+    }
+}
+
+.text-img p {
+    @include responsive(Mobile) {
+        width: 10%;
+        height: 50vh;
+        margin-top: 0vh;
+    }
+}
+
+.text-img,
+.img {
+    @include responsive(Tablet) {
+        margin-top: 5px;
+    }
+}
+
+.text-img p {
+    @include responsive(Mobile) {
+        font-size: 16px;
+        margin-top: 0;
+
+    }
+}
+
+.text-img h2 {
+    @include responsive(Tablet) {
+        font-size: 20px;
+    }
+
+    @include responsive(Mobile) {
+        margin-top: 0vh;
+
+    }
+
+}
+
+.title-imgevent-past {
+    font-size: 26px;
+    margin-left: 5vh;
+
+    @include responsive(Tablet) {
+        height: 45vh;
+        width: 45%;
+        margin-left: 8vh;
+    }
+
+    @include responsive(Mobile) {
+        height: 45vh;
+        width: 86%;
+        margin-top: 7vh;
+        margin-left: 0;
+
+    }
+}
+
+.title-imgevent-past h2 {
+    font-size: 30px;
+    width: 100vh;
+    margin-top: 5vh;
+    @include responsive(Tablet) {
+       margin-top: 2vh;
+       font-size: 25px;
+    }
+}
+
+.title-imgevent-past p {
+    width: 90%;
+
+    @include responsive(Tablet) {
+        width: 48%;
+        font-size: 21px;
+    }
+
+    @include responsive(Mobile) {
+        width: 86%;
+        height: 13vh;
+        font-size: 20px;
+    }
+}
+
+.g-icon {
+    height: 20vh;
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+
+    @include responsive(Tablet) {
+        height: 15vh;
+        gap: 5px;
+        margin-top: 0;
+    }
+
+    @include responsive(Mobile) {
+        width: 85%;
+        height: 10vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.icon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    i {
+        width: 10%;
+
+        @include responsive(Tablet) {
+            width: 7px;
+        }
+
+        @include responsive(Mobile) {
+            margin-left: 5vh;
+        }
+
+
+    }
+
+    @include responsive(Mobile) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+
+}
+
+.icon p {
+    margin-right: 30vh;
+    margin-top: 1vh;
+    width: 100%;
+    font-size: 15px;
+
+
+    @include responsive(Tablet) {
+        margin-left: 25px;
+       
+    }
+
+    @include responsive(Mobile) {
+        margin-top: 2vh;
+        margin-left: 0px;
+        font-size: 12px;
+    }
+
+}
+
+.search-box input {
+    @include responsive(Mobile) {
+        width: 100%;
+        height: 20px;
+        font-size: small;
+    }
+
+}
+
+
+
+button {
+    @include responsive(Mobile) {
+        width: 20px;
+        height: 3px;
+    }
+}
