@@ -32,16 +32,27 @@ main {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image: url(../PIC/Imgevent/bg3.png);
+    @include responsive(Tablet) {
+        width: 100%;
+        height: 45vh;
+    }
 
     @include responsive(Mobile) {
         width: 100%;
         height: 70vh;
     }
-    @include responsive(Tablet) {
-        width: 100%;
-        height: 70vh;
-    }
+   
 }
+.card , .img img ,.title-imgevent-past{
+    @include responsive (Tablet){
+        transition: 2s ease-in-out;
+
+    }
+
+
+
+}
+
 .title-event {
     height: 30vh;
     width: 120vh;
@@ -52,13 +63,14 @@ main {
     background-color: #00000048;
 
     @include responsive(Tablet) {
-        width: 65vh;
+        width: 70%;
+        height: 25vh;
         padding: 2vh;
     }
 
     @include responsive(Mobile) {
-        width: 65vh;
-        height: 30vh;
+        width: 75%;
+        height: 20vh;
         padding: 0vh;
         padding-right: 1vh;
         font-size: 16px;
@@ -70,18 +82,13 @@ main {
     animation: 4s linear 0s infinite running mySlide;
 
     @include responsive(Mobile) {
-        font-size: 35px;
+        font-size: 30px;
     }
 }
 
 @keyframes mySlide {
-    from {
-        margin-left: 20%
-    }
-
-    to {
-        margin-left: 0%
-    }
+    from {margin-left: 20%}
+    to {margin-left: 0%}
 }
 
 h1,
@@ -102,12 +109,12 @@ h1,
     @include responsive(Tablet) {
         display: grid;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
     }
 
     @include responsive(Mobile) {
         width: 100%;
-        height: 110vh;
+        height: 93vh;
         border-right: none;
         gap: 0px;
         grid-template-columns: repeat(1, 1fr);
@@ -126,6 +133,9 @@ h1,
     @include responsive(Tablet) {
         margin: 30px;
     }
+    @include responsive(Mobile) {
+        margin: 10px;
+    }
 
 }
 
@@ -139,7 +149,7 @@ h1,
     }
     
     @include responsive(Tablet) {
-        font-size: 35px;
+        font-size: 25px;
     }
 }
 
@@ -166,14 +176,14 @@ h1,
 
 .img img {
     @include responsive(Tablet) {
-        width: 40vh;
-        height: 45vh;
-        margin-top: 1.5vh;
+        width: 25vh;
+        height: 25vh;
+      
       
     }
     @include responsive(Mobile) {
-        height: 50vh;
-        width: 122.5%;
+        height: 40vh;
+        width: 61%;
         margin-top: 0;
     }
 }
@@ -186,7 +196,7 @@ h1,
     margin-top: 5vh;
 
     @include responsive(Tablet) {
-        width: 35vh;
+        width: 26vh;
         height: 25vh;
     }
 
@@ -198,9 +208,10 @@ h1,
 
 .text-img p {
     @include responsive(Mobile) {
-        width: 10%;
-        height: 50vh;
+        height: 20vh;
+        margin-right: 2vh;
         margin-top: 0vh;
+
     }
 }
 
@@ -235,16 +246,17 @@ h1,
     margin-left: 5vh;
 
     @include responsive(Tablet) {
+        width: 30%;
         height: 45vh;
-        width: 45%;
-        margin-left: 8vh;
+        margin-left: 1vh;
     }
 
     @include responsive(Mobile) {
-        height: 45vh;
-        width: 86%;
+        height: 55vh;
+        width: 39%;
         margin-top: 15vh;
-        margin-left: 0;
+        margin-left: 2vh;
+        margin-right: 2vh;
 
     }
 }
@@ -263,12 +275,12 @@ h1,
     width: 90%;
 
     @include responsive(Tablet) {
-        width: 48%;
+        width: 30%;
         font-size: 21px;
     }
 
     @include responsive(Mobile) {
-        width: 86%;
+        width: 39%;
         height: 13vh;
         font-size: 20px;
     }
@@ -282,16 +294,20 @@ h1,
 
 
     @include responsive(Tablet) {
-        height: 15vh;
+        width: 30%;
+        height: 10vh;
+        margin-bottom: 10vh;
         gap: 5px;
         margin-top: 0;
+
     }
 
     @include responsive(Mobile) {
-        width: 85%;
-        height: 10vh;
+        width: 10%;
+        height: 5vh;
+        margin-bottom: 10vh;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -307,13 +323,16 @@ h1,
         }
 
         @include responsive(Mobile) {
+            display: none;
             margin-left: 5vh;
+            background-color: chocolate;
         }
 
 
     }
 
     @include responsive(Mobile) {
+        width: 10px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -336,9 +355,10 @@ h1,
     }
 
     @include responsive(Mobile) {
-        margin-top: 2vh;
-        margin-left: 0px;
-        font-size: 12px;
+        height: 15px;
+        margin-top: 0vh;
+        font-size: 14px;
+
     }
 
 }
@@ -351,9 +371,6 @@ h1,
     }
 
 }
-
-
-
 button {
     @include responsive(Mobile) {
         width: 20px;

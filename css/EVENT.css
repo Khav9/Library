@@ -310,16 +310,22 @@ main {
   background-size: 100% 100%;
   background-image: url(../PIC/Imgevent/bg3.png);
 }
+@media screen and (max-width: 900px) {
+  .banner-event {
+    width: 100%;
+    height: 45vh;
+  }
+}
 @media screen and (max-width: 600px) {
   .banner-event {
     width: 100%;
     height: 70vh;
   }
 }
+
 @media screen and (max-width: 900px) {
-  .banner-event {
-    width: 100%;
-    height: 70vh;
+  .card, .img img, .title-imgevent-past {
+    transition: 2s ease-in-out;
   }
 }
 
@@ -334,14 +340,15 @@ main {
 }
 @media screen and (max-width: 900px) {
   .title-event {
-    width: 65vh;
+    width: 70%;
+    height: 25vh;
     padding: 2vh;
   }
 }
 @media screen and (max-width: 600px) {
   .title-event {
-    width: 65vh;
-    height: 30vh;
+    width: 75%;
+    height: 20vh;
     padding: 0vh;
     padding-right: 1vh;
     font-size: 16px;
@@ -354,7 +361,7 @@ main {
 }
 @media screen and (max-width: 600px) {
   .title-event h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 
@@ -385,13 +392,13 @@ h1,
   .card {
     display: grid;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
   }
 }
 @media screen and (max-width: 600px) {
   .card {
     width: 100%;
-    height: 110vh;
+    height: 93vh;
     border-right: none;
     gap: 0px;
     grid-template-columns: repeat(1, 1fr);
@@ -412,6 +419,12 @@ h1,
     margin: 30px;
   }
 }
+@media screen and (max-width: 600px) {
+  .past-event,
+  .incoming-event {
+    margin: 10px;
+  }
+}
 
 .past-event h1,
 .incoming-event h1 {
@@ -427,7 +440,7 @@ h1,
 @media screen and (max-width: 900px) {
   .past-event h1,
   .incoming-event h1 {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 
@@ -453,15 +466,14 @@ h1,
 
 @media screen and (max-width: 900px) {
   .img img {
-    width: 40vh;
-    height: 45vh;
-    margin-top: 1.5vh;
+    width: 25vh;
+    height: 25vh;
   }
 }
 @media screen and (max-width: 600px) {
   .img img {
-    height: 50vh;
-    width: 122.5%;
+    height: 40vh;
+    width: 61%;
     margin-top: 0;
   }
 }
@@ -475,7 +487,7 @@ h1,
 }
 @media screen and (max-width: 900px) {
   .img {
-    width: 35vh;
+    width: 26vh;
     height: 25vh;
   }
 }
@@ -488,8 +500,8 @@ h1,
 
 @media screen and (max-width: 600px) {
   .text-img p {
-    width: 10%;
-    height: 50vh;
+    height: 20vh;
+    margin-right: 2vh;
     margin-top: 0vh;
   }
 }
@@ -524,17 +536,18 @@ h1,
 }
 @media screen and (max-width: 900px) {
   .title-imgevent-past {
+    width: 30%;
     height: 45vh;
-    width: 45%;
-    margin-left: 8vh;
+    margin-left: 1vh;
   }
 }
 @media screen and (max-width: 600px) {
   .title-imgevent-past {
-    height: 45vh;
-    width: 86%;
+    height: 55vh;
+    width: 39%;
     margin-top: 15vh;
-    margin-left: 0;
+    margin-left: 2vh;
+    margin-right: 2vh;
   }
 }
 
@@ -555,13 +568,13 @@ h1,
 }
 @media screen and (max-width: 900px) {
   .title-imgevent-past p {
-    width: 48%;
+    width: 30%;
     font-size: 21px;
   }
 }
 @media screen and (max-width: 600px) {
   .title-imgevent-past p {
-    width: 86%;
+    width: 39%;
     height: 13vh;
     font-size: 20px;
   }
@@ -575,17 +588,20 @@ h1,
 }
 @media screen and (max-width: 900px) {
   .g-icon {
-    height: 15vh;
+    width: 30%;
+    height: 10vh;
+    margin-bottom: 10vh;
     gap: 5px;
     margin-top: 0;
   }
 }
 @media screen and (max-width: 600px) {
   .g-icon {
-    width: 85%;
-    height: 10vh;
+    width: 10%;
+    height: 5vh;
+    margin-bottom: 10vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -603,11 +619,14 @@ h1,
 }
 @media screen and (max-width: 600px) {
   .icon i {
+    display: none;
     margin-left: 5vh;
+    background-color: chocolate;
   }
 }
 @media screen and (max-width: 600px) {
   .icon {
+    width: 10px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -626,9 +645,9 @@ h1,
 }
 @media screen and (max-width: 600px) {
   .icon p {
-    margin-top: 2vh;
-    margin-left: 0px;
-    font-size: 12px;
+    height: 15px;
+    margin-top: 0vh;
+    font-size: 14px;
   }
 }
 
